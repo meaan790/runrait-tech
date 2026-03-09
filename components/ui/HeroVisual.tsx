@@ -22,13 +22,14 @@ const agents = [
 
 const systems = [
   "Messaging AI",
+  "Brand Voice AI",
   "Website AI",
-  "CRM AI",
+  "Design System AI",
+  "Pipeline Management AI",
   "Lead Scoring AI",
   "Analytics AI",
   "Sales Enablement AI",
   "Email Nurture AI",
-  "Brand Voice AI",
 ];
 
 export function HeroVisual() {

@@ -16,6 +16,7 @@ import {
   Presentation,
   Mail,
   Sparkles,
+  Palette,
   Layers,
   Zap,
   ShieldCheck,
@@ -181,16 +182,28 @@ export const SYSTEM_POWERED: SystemCard[] = [
       "AI-driven research, competitor analysis, and message testing. Your team makes the strategic calls on a foundation of data, not guesswork.",
   },
   {
+    icon: Sparkles,
+    title: "Brand Voice AI",
+    description:
+      "Tone enforcement, copy review, and style guide alignment across all outputs. Keeps every touchpoint consistent without manual QA.",
+  },
+  {
     icon: Globe,
     title: "Website AI",
     description:
       "AI-built, conversion-optimised, and continuously tested. Connected to your analytics and updated based on performance data.",
   },
   {
-    icon: Database,
-    title: "CRM AI",
+    icon: Palette,
+    title: "Design System AI",
     description:
-      "AI-configured deal stages, lead scoring, and automated workflows. A single source of truth for your pipeline that stays clean on its own.",
+      "Maintains visual consistency across every touchpoint. Templates, components, and brand assets that stay on-brand without design bottlenecks.",
+  },
+  {
+    icon: Database,
+    title: "Pipeline Management AI",
+    description:
+      "AI-configured deal stages, automated workflows, and pipeline hygiene. A single source of truth for your pipeline that stays clean on its own.",
   },
   {
     icon: SlidersHorizontal,
@@ -215,12 +228,6 @@ export const SYSTEM_POWERED: SystemCard[] = [
     title: "Email Nurture AI",
     description:
       "Drip campaigns, intent-based triggers, and lifecycle nurtures. Automated follow-up at scale, personalised to where each lead is in the journey.",
-  },
-  {
-    icon: Sparkles,
-    title: "Brand Voice AI",
-    description:
-      "Tone enforcement, copy review, and style guide alignment across all outputs. Keeps every touchpoint consistent without manual QA.",
   },
 ];
 
