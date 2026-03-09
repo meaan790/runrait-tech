@@ -11,21 +11,23 @@ const roles = [
 ];
 
 const agents = [
-  "Research agent",
-  "Content agent",
-  "SDR agent",
-  "Pipeline agent",
-  "Onboarding agent",
-  "Customer success agent",
+  "Research Agent",
+  "Content Agent",
+  "SDR Agent",
+  "Pipeline Agent",
+  "Onboarding Agent",
+  "CS Ops Agent",
 ];
 
 const systems = [
-  "Positioning and messaging",
-  "Website and landing pages",
-  "CRM and pipeline",
-  "Lead scoring",
-  "Analytics and reporting",
-  "Sales enablement",
+  "Messaging AI",
+  "Website AI",
+  "CRM AI",
+  "Lead Scoring AI",
+  "Analytics AI",
+  "Sales Enablement AI",
+  "Email Nurture AI",
+  "Brand Voice AI",
 ];
 
 export function HeroVisual() {

@@ -14,6 +14,8 @@ import {
   SlidersHorizontal,
   TrendingUp,
   Presentation,
+  Mail,
+  Sparkles,
   Layers,
   Zap,
   ShieldCheck,
@@ -135,78 +137,90 @@ export interface SystemCard {
 export const SYSTEM_AGENTS: SystemCard[] = [
   {
     icon: Search,
-    title: "Research agent",
+    title: "Research Agent",
     description:
       "Monitors market signals, competitor moves, and ICP behaviour. Keeps your positioning sharp with data instead of guesswork. Feeds insights into content and outbound.",
   },
   {
     icon: PenTool,
-    title: "Content agent",
+    title: "Content Agent",
     description:
       "Generates content against your messaging framework, maintains publishing cadence, repurposes across channels, and distributes on schedule.",
   },
   {
     icon: Bot,
-    title: "SDR agent",
+    title: "SDR Agent",
     description:
       "Researches prospects, personalises outreach, sends sequences, handles replies, and books meetings. Runs 24/7 across your target accounts.",
   },
   {
     icon: Workflow,
-    title: "Pipeline agent",
+    title: "Pipeline Agent",
     description:
       "Monitors deal activity, flags stalled deals, triggers follow-ups, updates your CRM, and keeps pipeline hygiene tight without anyone chasing it.",
   },
   {
     icon: Rocket,
-    title: "Onboarding agent",
+    title: "Onboarding Agent",
     description:
       "Triggers activation sequences for new customers, monitors first-value milestones, escalates at-risk accounts early, and bridges the gap between closing and retention.",
   },
   {
     icon: HeartHandshake,
-    title: "Customer success agent",
+    title: "CS Ops Agent",
     description:
-      "Monitors usage patterns, flags churn risk, triggers onboarding sequences, and surfaces expansion opportunities based on behaviour signals.",
+      "Monitors account health, prepares QBR data, flags churn risk, pulls usage reports, and surfaces expansion opportunities. Keeps CS operations tight without manual tracking.",
   },
 ];
 
 export const SYSTEM_POWERED: SystemCard[] = [
   {
     icon: Target,
-    title: "Positioning and messaging",
+    title: "Messaging AI",
     description:
       "AI-driven research, competitor analysis, and message testing. Your team makes the strategic calls on a foundation of data, not guesswork.",
   },
   {
     icon: Globe,
-    title: "Website and landing pages",
+    title: "Website AI",
     description:
       "AI-built, conversion-optimised, and continuously tested. Connected to your analytics and updated based on performance data.",
   },
   {
     icon: Database,
-    title: "CRM and pipeline architecture",
+    title: "CRM AI",
     description:
       "AI-configured deal stages, lead scoring, and automated workflows. A single source of truth for your pipeline that stays clean on its own.",
   },
   {
     icon: SlidersHorizontal,
-    title: "Lead scoring and qualification",
+    title: "Lead Scoring AI",
     description:
-      "AI scores and routes based on behaviour and fit. Sets the rules, learns from outcomes, and gets sharper over time.",
+      "Scores and routes based on behaviour and fit. Sets the rules, learns from outcomes, and gets sharper over time.",
   },
   {
     icon: TrendingUp,
-    title: "Analytics and reporting",
+    title: "Analytics AI",
     description:
-      "AI surfaces insights, detects anomalies, and generates reports. Your team interprets and acts on what matters.",
+      "Surfaces insights, detects anomalies, and generates reports. Your team interprets and acts on what matters.",
   },
   {
     icon: Presentation,
-    title: "Sales enablement",
+    title: "Sales Enablement AI",
     description:
-      "AI generates decks, case studies, and objection handling materials from your data. Your team refines for context and uses them to close.",
+      "Generates decks, case studies, and objection handling materials from your data. Your team refines for context and uses them to close.",
+  },
+  {
+    icon: Mail,
+    title: "Email Nurture AI",
+    description:
+      "Drip campaigns, intent-based triggers, and lifecycle nurtures. Automated follow-up at scale, personalised to where each lead is in the journey.",
+  },
+  {
+    icon: Sparkles,
+    title: "Brand Voice AI",
+    description:
+      "Tone enforcement, copy review, and style guide alignment across all outputs. Keeps every touchpoint consistent without manual QA.",
   },
 ];
 
