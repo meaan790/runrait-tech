@@ -41,10 +41,13 @@ export const HERO = {
 export const PROBLEM = {
   headlineLine1: "You have product-market fit.",
   headlineLine2: "You don\u2019t have a revenue engine yet.",
-  body: "Customers are paying. Retention looks good. But revenue growth is manual, founder-dependent, and not scaling.",
-  body2: "The default answer is to hire. A Head of Growth. A Demand Gen Lead. An SDR. A Content Marketer. Before you know it you\u2019re building a 5-person GTM team burning $80k+ a month, and it still takes 6 months before the system is working.",
-  body3: "That\u2019s capital you could be spending on product. On engineering. On the things that actually compound.",
-  closing: "You don\u2019t need a bigger team. You need a system that does the work a team would do.",
+  body: "Customers are paying. Retention looks good. But growth looks like this:",
+  symptoms: [
+    { icon: User, label: "Founder-led sales", detail: "You\u2019re closing every deal yourself. It works, but it doesn\u2019t scale." },
+    { icon: CircleX, label: "Disconnected tools", detail: "CRM half set up. Outbound inconsistent. Analytics you don\u2019t trust. Nothing connects." },
+    { icon: TrendingUp, label: "No repeatable process", detail: "Revenue grows when you push. It stalls when you stop. There\u2019s no system running without you." },
+  ],
+  closing: "You don\u2019t need more tactics. You need a revenue engine.",
 };
 
 export interface OptionCard {
@@ -64,7 +67,7 @@ export const TYPICAL_OPTIONS: {
       icon: UserSearch,
       title: "Build a GTM team",
       description:
-        "$500k+ in salaries across 5\u20136 hires. 6\u201312 months before it\u2019s working. And you\u2019re managing all of them.",
+        "$500k+ in salaries across 5 hires. 6\u201312 months before it\u2019s working. And you\u2019re managing a team.",
     },
     {
       icon: Building2,
