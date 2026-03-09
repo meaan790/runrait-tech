@@ -31,17 +31,20 @@ export const NAV_LINKS = [
 ];
 
 export const HERO = {
-  headline: "The revenue engine your startup is missing.",
+  headline: "Scale your revenue without scaling your team.",
   subheadline:
-    "Runrait builds complete go-to-market systems for early-stage startups. Strategy, infrastructure, and AI agents, all connected as one system.",
+    "Runrait builds AI-powered GTM systems that give founders the output of a full go-to-market team. Without the headcount.",
   cta: "Book a Discovery Call",
-  ctaHref: "#cta",
+  ctaHref: "https://calendar.app.google/PmoSPF4DyqnD6akk6",
 };
 
 export const PROBLEM = {
-  headline: "You have product-market fit. You don\u2019t have a revenue engine.",
-  body: "Revenue growth is manual, founder-dependent, and not scaling. Your CRM is half set up. Outbound is inconsistent. Nothing connects.",
-  closing: "You don\u2019t need more tactics. You need a system.",
+  headlineLine1: "You have product-market fit.",
+  headlineLine2: "You don\u2019t have a revenue engine yet.",
+  body: "Customers are paying. Retention looks good. But revenue growth is manual, founder-dependent, and not scaling.",
+  body2: "The default answer is to hire. A Head of Growth. A Demand Gen Lead. An SDR. A Content Marketer. Before you know it you\u2019re building a 5-person GTM team burning $80k+ a month, and it still takes 6 months before the system is working.",
+  body3: "That\u2019s capital you could be spending on product. On engineering. On the things that actually compound.",
+  closing: "You don\u2019t need a bigger team. You need a system that does the work a team would do.",
 };
 
 export interface OptionCard {
@@ -59,9 +62,9 @@ export const TYPICAL_OPTIONS: {
   cards: [
     {
       icon: UserSearch,
-      title: "Hire a Head of Growth",
+      title: "Build a GTM team",
       description:
-        "$180\u2013250k+. 6\u201312 months before results. High risk of a bad hire.",
+        "$500k+ in salaries across 5\u20136 hires. 6\u201312 months before it\u2019s working. And you\u2019re managing all of them.",
     },
     {
       icon: Building2,
@@ -80,10 +83,10 @@ export const TYPICAL_OPTIONS: {
 };
 
 export const WHAT_RUNRAIT_DOES = {
-  headline: "Your GTM system. Designed, built, and ready to run.",
-  body: "Runrait embeds with your team and builds the complete go-to-market system your startup needs. We start with discovery to find the right motion for your product and market. Then we design the strategy, build the infrastructure, and deploy AI agents that keep the system running.",
-  body2:
-    "We\u2019re not an agency selling tactics. We\u2019re not a hire you need to manage. We build the system, connect every piece, and make it yours.",
+  headline: "The GTM team you\u2019d hire. Built as a system.",
+  body: "Runrait embeds with your team and builds an AI-powered go-to-market system that does the work of a full GTM org. Outreach, pipeline management, content, lead gen, reporting, customer success. All running, all connected, without the headcount.",
+  body2: "We start with discovery to find the right motion for your product and market. Then we build iteratively, shipping components that generate results early, not a 6-month buildout you have to wait on. Each piece connects to the last, so the system compounds as it grows.",
+  body3: "You stay lean. Your capital goes further.\nAnd your revenue engine scales without your team needing to.",
 };
 
 export interface PhaseCard {
@@ -108,8 +111,8 @@ export const HOW_IT_WORKS: {
     {
       number: "02",
       title: "Build",
-      tagline: "Build what\u2019s missing. Fix what\u2019s broken. Connect everything.",
-      body: "We build the GTM infrastructure in components. Everything connected, everything measurable, everything yours. No lock-in, no proprietary tools.",
+      tagline: "Quick wins first. Full system over time.",
+      body: "We ship in chunks, not phases. You see results in weeks, not quarters. Each component goes live as it\u2019s ready, so value compounds while we\u2019re still building.",
     },
     {
       number: "03",
@@ -218,7 +221,7 @@ export const COMPARISON = {
   headers: ["", "Agency", "GTM Hire", "Runrait"],
   rows: [
     ["What you get", "Tactics and deliverables", "A person (eventually)", "A working GTM system"],
-    ["Time to value", "Ongoing, incremental", "6\u201312 months", "Weeks, not months"],
+    ["Time to value", "Ongoing, incremental", "6\u201312 months", "Quick wins in weeks. Full system over time."],
     ["Strategy included", "Rarely", "Depends on the hire", "Always. Discovery first."],
     ["Execution included", "Partial (their channel)", "Depends on bandwidth", "End-to-end"],
     ["System thinking", "Siloed", "Varies", "Core to the approach"],
@@ -246,15 +249,15 @@ export const WHY_IT_WORKS: {
     },
     {
       icon: Layers,
-      title: "End-to-end.",
+      title: "Quick wins, then compound.",
       description:
-        "Strategy, infrastructure, AI agents, and ongoing management. No handoffs between teams. Everything connects because one team holds the whole picture.",
+        "We don\u2019t disappear for 6 months and hand you a system. You get working pieces from week one. Each component goes live as it\u2019s ready, so results start before the full build is done.",
     },
     {
       icon: Zap,
-      title: "AI agents built in.",
+      title: "AI replaces headcount.",
       description:
-        "Parts of your GTM system run themselves. AI handles outreach, pipeline management, and routine operations at scale. You get a system that works while you sleep.",
+        "Your SDR, pipeline manager, content engine, and customer success workflows run as AI agents. You get the output of a full GTM team without the salaries, the management overhead, or the ramp time.",
     },
     {
       icon: ShieldCheck,
@@ -272,15 +275,15 @@ export interface FitItem {
 
 export const WHO_ITS_FOR = {
   headline:
-    "Built for founders closing the gap between PMF and repeatable revenue.",
-  body: "Seed-to-Series-A startups with proven PMF but no scalable GTM system.",
+    "Built for founders who want to scale revenue, not headcount.",
+  body: "Runrait works best with seed-to-Series-A startups (typically B2B SaaS, marketplace, fintech, or tech-enabled services) that have proven product-market fit but haven\u2019t built a scalable go-to-market system yet.",
   fitLabel: "You might be a fit if:",
   items: [
     { icon: User, text: "You\u2019re the CEO doing sales and it\u2019s not scaling." },
-    { icon: CircleX, text: "Agencies and marketing hires haven\u2019t moved the needle." },
-    { icon: Users, text: "Paying customers but no repeatable process to find more." },
-    { icon: Compass, text: "Not sure if you should be inbound, outbound, or product-led." },
-    { icon: CircleCheckBig, text: "You need someone who gets it, not someone to manage." },
+    { icon: CircleX, text: "You\u2019d rather spend capital on product and engineering than a GTM team." },
+    { icon: Users, text: "You\u2019ve tried an agency or a marketing hire and it didn\u2019t move the needle." },
+    { icon: Compass, text: "You have paying customers but no repeatable process to find more of them." },
+    { icon: CircleCheckBig, text: "You want the output of a GTM team without building one." },
   ] as FitItem[],
 };
 

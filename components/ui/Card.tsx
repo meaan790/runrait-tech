@@ -24,7 +24,7 @@ export function Card({ icon: Icon, title, description, className = "" }: CardPro
       <h3 className="text-base font-semibold leading-snug text-text-primary">
         {title}
       </h3>
-      <p className="text-sm leading-relaxed text-text-secondary">{description}</p>
+      <p className="whitespace-pre-line text-sm leading-relaxed text-text-secondary">{description}</p>
     </motion.div>
   );
 }

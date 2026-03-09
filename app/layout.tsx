@@ -15,13 +15,13 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Runrait — The revenue engine your startup is missing",
+  title: "Runrait | AI-Powered GTM Systems for Startups",
   description:
-    "Runrait builds complete go-to-market systems for early-stage startups. Strategy, infrastructure, and AI agents, all connected as one system.",
+    "Runrait builds AI-powered go-to-market systems that give early-stage startups the output of a full GTM team. Without the headcount. Scale revenue, not your team.",
   openGraph: {
-    title: "Runrait — The revenue engine your startup is missing",
+    title: "Runrait | AI-Powered GTM Systems for Startups",
     description:
-      "Runrait builds complete go-to-market systems for early-stage startups. Strategy, infrastructure, and AI agents, all connected as one system.",
+      "Runrait builds AI-powered go-to-market systems that give early-stage startups the output of a full GTM team. Without the headcount. Scale revenue, not your team.",
     url: "https://runrait.ai",
     siteName: "Runrait",
     type: "website",

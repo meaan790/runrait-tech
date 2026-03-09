@@ -12,13 +12,17 @@ export function WhatRunraitDoes() {
           {WHAT_RUNRAIT_DOES.headline}
         </h2>
 
-        <p className="max-w-[720px] text-lg leading-relaxed text-text-secondary">
-          {WHAT_RUNRAIT_DOES.body}
-        </p>
-
-        <p className="max-w-[720px] text-lg leading-relaxed text-text-secondary">
-          {WHAT_RUNRAIT_DOES.body2}
-        </p>
+        <div className="flex max-w-[720px] flex-col gap-6">
+          <p className="text-lg leading-relaxed text-text-secondary">
+            {WHAT_RUNRAIT_DOES.body}
+          </p>
+          <p className="text-lg leading-relaxed text-text-secondary">
+            {WHAT_RUNRAIT_DOES.body2}
+          </p>
+          <p className="whitespace-pre-line text-base font-medium leading-relaxed text-text-primary">
+            {WHAT_RUNRAIT_DOES.body3}
+          </p>
+        </div>
 
         <FlowVisual />
       </div>

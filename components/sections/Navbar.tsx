@@ -40,7 +40,7 @@ export function Navbar() {
               {link.label}
             </a>
           ))}
-          <Button href="#cta" className="!px-6 !py-2.5 !text-sm">
+          <Button href="https://calendar.app.google/PmoSPF4DyqnD6akk6" className="!px-6 !py-2.5 !text-sm">
             Book a Discovery Call
           </Button>
         </div>
@@ -75,7 +75,7 @@ export function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <Button href="#cta" className="mt-2 w-full !text-sm">
+              <Button href="https://calendar.app.google/PmoSPF4DyqnD6akk6" className="mt-2 w-full !text-sm">
                 Book a Discovery Call
               </Button>
             </div>
