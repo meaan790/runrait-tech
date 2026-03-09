@@ -11,11 +11,11 @@ const roles = [
 ];
 
 const agents = [
-  "Research Agent",
+  "Product Marketing Agent",
   "Content Agent",
   "SDR Agent",
-  "Pipeline Agent",
-  "Onboarding Agent",
+  "Campaign Agent",
+  "Marketing Ops Agent",
   "CS Ops Agent",
 ];
 
@@ -86,7 +86,10 @@ export function HeroVisual() {
           The Runrait way
         </span>
 
-        <div className="flex flex-wrap gap-1.5">
+        <span className="text-[8px] font-semibold uppercase tracking-widest text-text-tertiary">
+          AI agents
+        </span>
+        <div className="-mt-1 flex flex-wrap gap-1.5">
           {agents.map((agent) => (
             <div
               key={agent}
@@ -100,7 +103,10 @@ export function HeroVisual() {
           ))}
         </div>
 
-        <div className="flex flex-wrap gap-1">
+        <span className="text-[8px] font-semibold uppercase tracking-widest text-text-tertiary">
+          AI-powered systems
+        </span>
+        <div className="-mt-1 flex flex-wrap gap-1">
           {systems.map((system) => (
             <div
               key={system}

@@ -5,8 +5,8 @@ import {
   Search,
   PenTool,
   Bot,
-  Workflow,
-  Rocket,
+  Megaphone,
+  Settings,
   HeartHandshake,
   Target,
   Globe,
@@ -137,9 +137,9 @@ export interface SystemCard {
 export const SYSTEM_AGENTS: SystemCard[] = [
   {
     icon: Search,
-    title: "Research Agent",
+    title: "Product Marketing Agent",
     description:
-      "Monitors market signals, competitor moves, and ICP behaviour. Keeps your positioning sharp with data instead of guesswork. Feeds insights into content and outbound.",
+      "Runs competitive analysis, refines positioning, builds messaging frameworks, and keeps your ICP research current. Feeds strategy into content, campaigns, and outbound.",
   },
   {
     icon: PenTool,
@@ -154,16 +154,16 @@ export const SYSTEM_AGENTS: SystemCard[] = [
       "Researches prospects, personalises outreach, sends sequences, handles replies, and books meetings. Runs 24/7 across your target accounts.",
   },
   {
-    icon: Workflow,
-    title: "Pipeline Agent",
+    icon: Megaphone,
+    title: "Campaign Agent",
     description:
-      "Monitors deal activity, flags stalled deals, triggers follow-ups, updates your CRM, and keeps pipeline hygiene tight without anyone chasing it.",
+      "Executes campaigns across channels, manages launch sequences, runs A/B tests, and optimises based on performance data. Coordinates paid, organic, and event-driven motions.",
   },
   {
-    icon: Rocket,
-    title: "Onboarding Agent",
+    icon: Settings,
+    title: "Marketing Ops Agent",
     description:
-      "Triggers activation sequences for new customers, monitors first-value milestones, escalates at-risk accounts early, and bridges the gap between closing and retention.",
+      "Manages automation workflows, maintains attribution models, keeps data clean across your stack, and ensures every tool is connected and reporting accurately.",
   },
   {
     icon: HeartHandshake,
