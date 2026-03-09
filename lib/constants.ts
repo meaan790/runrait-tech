@@ -36,7 +36,7 @@ export const NAV_LINKS = [
 export const HERO = {
   headline: "Scale your revenue without scaling your team.",
   subheadline:
-    "Runrait builds AI-powered GTM systems that give founders the output of a full go-to-market team. Without the headcount.",
+    "Runrait builds AI-powered GTM systems that give your team the output of a full go-to-market org.",
   cta: "Book a Discovery Call",
   ctaHref: "https://calendar.app.google/PmoSPF4DyqnD6akk6",
 };
@@ -90,7 +90,7 @@ export const TYPICAL_OPTIONS: {
 
 export const WHAT_RUNRAIT_DOES = {
   headline: "The GTM team you\u2019d hire. Built as a system.",
-  body: "Runrait embeds with your team and builds an AI-powered go-to-market system. Product marketing, demand gen, content, SDR, revenue ops, CS ops. AI agents and AI-powered systems, all connected, without the headcount.",
+  body: "Runrait embeds with your team and builds an AI-powered go-to-market system. Product marketing, demand gen, content, SDR, revenue ops, CS ops. AI agents and AI-powered systems that amplify what your team can do.",
   body2: "We start with discovery to find the right motion for your product and market. Then we build iteratively, shipping components that generate results early, not a 6-month buildout you have to wait on. Each piece connects to the last, so the system compounds as it grows.",
   body3: "You stay lean. Your capital goes further.\nAnd your revenue engine scales without your team needing to.",
 };
@@ -279,9 +279,9 @@ export const WHY_IT_WORKS: {
     },
     {
       icon: Zap,
-      title: "AI replaces headcount.",
+      title: "AI amplifies your team.",
       description:
-        "Product marketing, demand gen, SDR, content, revenue ops, and CS ops run as AI agents. You get the output of a full GTM team without the salaries, the management overhead, or the ramp time.",
+        "Product marketing, demand gen, SDR, content, revenue ops, and CS ops run as AI agents alongside your team. A small team with the right system produces the output of a full GTM org.",
     },
     {
       icon: ShieldCheck,
@@ -299,7 +299,7 @@ export interface FitItem {
 
 export const WHO_ITS_FOR = {
   headline:
-    "Built for founders who want to scale revenue, not headcount.",
+    "Built for founders who want to scale revenue with a lean team.",
   body: "Runrait works best with seed-to-Series-A startups (typically B2B SaaS, marketplace, fintech, or tech-enabled services) that have proven product-market fit but haven\u2019t built a scalable go-to-market system yet.",
   fitLabel: "You might be a fit if:",
   items: [
