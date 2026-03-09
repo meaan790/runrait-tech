@@ -14,8 +14,8 @@ const agents = [
   "Product Marketing Agent",
   "Content Agent",
   "SDR Agent",
-  "Campaign Agent",
-  "Marketing Ops Agent",
+  "Demand Gen Agent",
+  "Revenue Ops Agent",
   "CS Ops Agent",
 ];
 

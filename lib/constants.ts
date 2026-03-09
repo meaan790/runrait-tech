@@ -155,15 +155,15 @@ export const SYSTEM_AGENTS: SystemCard[] = [
   },
   {
     icon: Megaphone,
-    title: "Campaign Agent",
+    title: "Demand Gen Agent",
     description:
-      "Executes campaigns across channels, manages launch sequences, runs A/B tests, and optimises based on performance data. Coordinates paid, organic, and event-driven motions.",
+      "Generates demand across channels, coordinates inbound and outbound motions, runs campaigns, and optimises based on performance data. Fills the top of your pipeline without a dedicated hire.",
   },
   {
     icon: Settings,
-    title: "Marketing Ops Agent",
+    title: "Revenue Ops Agent",
     description:
-      "Manages automation workflows, maintains attribution models, keeps data clean across your stack, and ensures every tool is connected and reporting accurately.",
+      "Manages deal progression, flags stalled deals, triggers follow-ups, keeps CRM hygiene tight, and maintains pipeline accuracy. Your revenue operations run without anyone chasing them.",
   },
   {
     icon: HeartHandshake,
