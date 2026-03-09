@@ -43,10 +43,10 @@ export const HERO = {
 export const PROBLEM = {
   headlineLine1: "You have product-market fit.",
   headlineLine2: "You don\u2019t have a revenue engine yet.",
-  body: "Customers are paying. Retention looks good. But growth looks like this:",
+  body: "You\u2019ve got customers. But growth looks like this:",
   symptoms: [
-    { icon: User, label: "Founder-led sales", detail: "You\u2019re closing every deal yourself. It works, but it doesn\u2019t scale." },
-    { icon: CircleX, label: "Disconnected tools", detail: "CRM half set up. Outbound inconsistent. Analytics you don\u2019t trust. Nothing connects." },
+    { icon: User, label: "Revenue depends on you", detail: "Whether it\u2019s closing deals or driving adoption, growth only happens when you\u2019re pushing it. It works, but it doesn\u2019t scale." },
+    { icon: CircleX, label: "Disconnected tools", detail: "CRM half set up. Marketing disconnected from sales. Analytics you don\u2019t trust. Nothing connects." },
     { icon: TrendingUp, label: "No repeatable process", detail: "Revenue grows when you push. It stalls when you stop. There\u2019s no system running without you." },
   ],
   closing: "You don\u2019t need more tactics. You need a revenue engine.",
