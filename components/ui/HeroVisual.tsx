@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion";
 
-const responsibilities = [
-  "Product marketing",
-  "Content",
-  "Demand gen",
+const hires = [
+  "Product Marketer",
+  "Content Marketer",
   "SDR",
-  "Revenue ops",
-  "CS ops",
+  "Demand Gen Lead",
+  "Rev Ops",
+  "CS Ops",
 ];
 
 const agents = [
@@ -35,41 +35,48 @@ const systems = [
 export function HeroVisual() {
   return (
     <div className="flex w-full max-w-[1100px] items-stretch gap-5">
-      {/* Left - Your first marketer */}
+      {/* Left - Hiring a GTM team */}
       <motion.div
-        className="flex w-[260px] shrink-0 flex-col gap-3 rounded-[10px] border border-border bg-[#111111] p-4"
+        className="flex flex-1 flex-col gap-3 rounded-[10px] border border-border bg-[#111111] p-4 opacity-55"
         initial={{ opacity: 0, x: -20 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        whileInView={{ opacity: 0.55, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <span className="text-[9px] font-semibold uppercase tracking-widest text-text-secondary">
-          Your first marketer
+        <span className="text-[9px] font-semibold uppercase tracking-widest text-text-tertiary">
+          Hiring a GTM team
         </span>
 
-        <span className="text-[11px] leading-relaxed text-text-tertiary">
-          Expected to handle all of this:
-        </span>
-
-        <div className="flex flex-col gap-1.5">
-          {responsibilities.map((item) => (
+        <div className="flex flex-wrap gap-1.5">
+          {hires.map((role) => (
             <div
-              key={item}
+              key={role}
               className="flex items-center gap-1.5 rounded-[5px] border border-border bg-bg px-2.5 py-1.5"
             >
               <div className="h-[5px] w-[5px] rounded-full bg-text-tertiary" />
-              <span className="text-[11px] text-text-secondary">{item}</span>
+              <span className="text-[11px] text-text-secondary">{role}</span>
             </div>
           ))}
         </div>
+
+        <div className="mt-auto flex items-center justify-between pt-2">
+          <span className="text-[11px] font-semibold text-text-tertiary">
+            $535k+ / year
+          </span>
+          <span className="text-[10px] text-text-tertiary">
+            6–12 months to ramp
+          </span>
+        </div>
       </motion.div>
 
-      {/* Plus */}
+      {/* Divider */}
       <div className="hidden items-center justify-center md:flex">
-        <span className="text-[18px] font-bold text-accent">+</span>
+        <span className="text-[13px] font-semibold tracking-[0.08em] text-text-tertiary">
+          vs
+        </span>
       </div>
 
-      {/* Right - Runrait */}
+      {/* Right - With Runrait */}
       <motion.div
         className="flex flex-1 flex-col gap-2 rounded-[10px] border border-accent bg-[#111111] p-4"
         initial={{ opacity: 0, x: 20 }}
@@ -78,7 +85,7 @@ export function HeroVisual() {
         transition={{ duration: 0.5 }}
       >
         <span className="text-[9px] font-semibold uppercase tracking-widest text-accent">
-          Augmented by Runrait
+          With Runrait
         </span>
 
         <span className="text-[8px] font-semibold uppercase tracking-widest text-text-tertiary">
