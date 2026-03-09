@@ -3,11 +3,12 @@
 import { motion } from "framer-motion";
 
 const roles = [
-  "Head of Growth",
-  "SDR",
+  "Product Marketer",
   "Content Marketer",
-  "Marketing Ops",
-  "Customer Success",
+  "SDR",
+  "Demand Gen Lead",
+  "Rev Ops",
+  "CS Ops",
 ];
 
 const agents = [
@@ -42,7 +43,7 @@ export function HeroVisual() {
         transition={{ duration: 0.5 }}
       >
         <span className="text-[9px] font-semibold uppercase tracking-widest text-text-tertiary">
-          The traditional way
+          The team you&apos;d hire
         </span>
 
         <div className="flex flex-wrap gap-1.5">
@@ -83,7 +84,7 @@ export function HeroVisual() {
         transition={{ duration: 0.5 }}
       >
         <span className="text-[9px] font-semibold uppercase tracking-widest text-accent">
-          The Runrait way
+          The system we build
         </span>
 
         <span className="text-[8px] font-semibold uppercase tracking-widest text-text-tertiary">
