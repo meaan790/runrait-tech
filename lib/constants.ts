@@ -89,7 +89,7 @@ export const TYPICAL_OPTIONS: {
 
 export const WHAT_RUNRAIT_DOES = {
   headline: "The GTM team you\u2019d hire. Built as a system.",
-  body: "Runrait embeds with your team and builds an AI-powered go-to-market system that does the work of a full GTM org. Outreach, pipeline management, content, lead gen, reporting, customer success. All running, all connected, without the headcount.",
+  body: "Runrait embeds with your team and builds an AI-powered go-to-market system. Product marketing, demand gen, content, SDR, revenue ops, CS ops. AI agents and AI-powered systems, all connected, without the headcount.",
   body2: "We start with discovery to find the right motion for your product and market. Then we build iteratively, shipping components that generate results early, not a 6-month buildout you have to wait on. Each piece connects to the last, so the system compounds as it grows.",
   body3: "You stay lean. Your capital goes further.\nAnd your revenue engine scales without your team needing to.",
 };
@@ -274,7 +274,7 @@ export const WHY_IT_WORKS: {
       icon: Zap,
       title: "AI replaces headcount.",
       description:
-        "Your SDR, pipeline manager, content engine, and customer success workflows run as AI agents. You get the output of a full GTM team without the salaries, the management overhead, or the ramp time.",
+        "Product marketing, demand gen, SDR, content, revenue ops, and CS ops run as AI agents. You get the output of a full GTM team without the salaries, the management overhead, or the ramp time.",
     },
     {
       icon: ShieldCheck,
@@ -296,7 +296,7 @@ export const WHO_ITS_FOR = {
   body: "Runrait works best with seed-to-Series-A startups (typically B2B SaaS, marketplace, fintech, or tech-enabled services) that have proven product-market fit but haven\u2019t built a scalable go-to-market system yet.",
   fitLabel: "You might be a fit if:",
   items: [
-    { icon: User, text: "You\u2019re the CEO doing sales and it\u2019s not scaling." },
+    { icon: User, text: "You\u2019re the founder driving revenue and it\u2019s not scaling." },
     { icon: CircleX, text: "You\u2019d rather spend capital on product and engineering than a GTM team." },
     { icon: Users, text: "You\u2019ve tried an agency or a marketing hire and it didn\u2019t move the needle." },
     { icon: Compass, text: "You have paying customers but no repeatable process to find more of them." },

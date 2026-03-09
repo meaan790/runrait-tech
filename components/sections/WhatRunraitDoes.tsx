@@ -14,7 +14,8 @@ export function WhatRunraitDoes() {
 
         <div className="flex max-w-[720px] flex-col gap-6">
           <p className="text-lg leading-relaxed text-text-secondary">
-            {WHAT_RUNRAIT_DOES.body}
+            <span className="font-bold text-accent">Runrait</span>{" "}
+            {WHAT_RUNRAIT_DOES.body.replace("Runrait ", "")}
           </p>
           <p className="text-lg leading-relaxed text-text-secondary">
             {WHAT_RUNRAIT_DOES.body2}
