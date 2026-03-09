@@ -13,7 +13,8 @@ export function WhoItsFor() {
         </h2>
 
         <p className="max-w-[700px] text-center text-lg leading-relaxed text-text-secondary">
-          {WHO_ITS_FOR.body}
+          <span className="font-bold text-accent">Runrait</span>{" "}
+          {WHO_ITS_FOR.body.replace("Runrait ", "")}
         </p>
 
         <div className="flex w-full max-w-[680px] flex-col gap-4 pt-8">

@@ -28,7 +28,7 @@ export function Comparison() {
                   i === 0
                     ? "text-left text-text-secondary"
                     : "text-center"
-                } ${i === 3 ? "text-accent" : "text-text-secondary"}`}
+                } ${i === 3 ? "font-bold text-accent" : "text-text-secondary"}`}
               >
                 {header}
               </div>
