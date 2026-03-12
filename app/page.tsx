@@ -3,7 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Problem } from "@/components/sections/Problem";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { WhatGetsBuilt } from "@/components/sections/WhatGetsBuilt";
-import { NotAnAgency } from "@/components/sections/NotAnAgency";
+import { Comparison } from "@/components/sections/Comparison";
 import { WhyItWorks } from "@/components/sections/WhyItWorks";
 import { WhoItsFor } from "@/components/sections/WhoItsFor";
 import { CTA } from "@/components/sections/CTA";
@@ -18,7 +18,7 @@ export default function Home() {
         <Problem />
         <HowItWorks />
         <WhatGetsBuilt />
-        <NotAnAgency />
+        <Comparison />
         <WhyItWorks />
         <WhoItsFor />
         <CTA />

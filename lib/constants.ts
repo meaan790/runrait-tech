@@ -173,21 +173,16 @@ export const FEATURED_SYSTEMS = [
   "Sales enablement",
 ];
 
-export const NOT_AN_AGENCY = {
+export const COMPARISON = {
   headline: "Not an agency. Not a hire. A system.",
-  blocks: [
-    {
-      title: "Agencies sell tactics.",
-      body: "They\u2019ll run a channel. Write some content. Send you a report. But no one owns the strategy, the pieces don\u2019t connect, and when the retainer ends, nothing stays.",
-    },
-    {
-      title: "A GTM hire takes a year.",
-      body: "Finding, hiring, and ramping one senior person is 6\u201312 months. You need results now, not a recruitment process.",
-    },
-    {
-      title: "Runrait builds the system.",
-      body: "One engagement. Strategy through execution. AI agents and AI-powered systems that give your team the output of a full GTM function. Everything connected. Everything yours.",
-    },
+  headers: ["", "Agency", "GTM Hire", "Runrait"],
+  rows: [
+    ["What you get", "Tactics and deliverables", "A person (eventually)", "A working GTM system"],
+    ["Time to value", "Ongoing, incremental", "6\u201312 months", "Quick wins in weeks. Full system over time."],
+    ["Strategy included", "Rarely", "Depends on the hire", "Always. Discovery first."],
+    ["Execution included", "Partial (their channel)", "Depends on bandwidth", "End-to-end"],
+    ["System thinking", "Siloed", "Varies", "Core to the approach"],
+    ["Cost", "$5\u201315k/mo retainer", "$180\u2013250k+ salary", "Project-based, outcome-aligned"],
   ],
 };
 
