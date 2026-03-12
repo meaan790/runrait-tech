@@ -85,7 +85,7 @@ export function HeroVisual() {
         transition={{ duration: 0.5 }}
       >
         <span className="text-[9px] font-semibold uppercase tracking-widest text-accent">
-          With Runrait
+          Your GTM OS
         </span>
 
         <span className="text-[8px] font-semibold uppercase tracking-widest text-text-tertiary">
