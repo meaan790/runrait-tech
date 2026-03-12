@@ -141,36 +141,26 @@ export const HOW_IT_WORKS: {
 export const GTM_OS = {
   headline: "The GTM team you\u2019d hire. Built for you as an operating system.",
   intro:
-    "Your operating system is built around two layers. AI agents that run your GTM autonomously, and AI-powered systems your team uses every day.",
-  body2:
-    "The agents do the work. The systems give your team the infrastructure to make better decisions, faster.",
+    "You have a founder leading GTM and maybe your first hire. Runrait builds the operating system around them \u2014 AI agents that handle execution autonomously, and AI-powered systems your team uses to make better decisions, faster.",
   closing:
     "Every operating system is different. Yours is scoped during discovery based on your product, your market, and where you are right now.",
-  knowledgeLabel: "Knowledge Layer",
-  knowledgeDesc:
-    "Scoped during discovery based on your product, market, and where you are right now",
   teamLabel: "Your Team",
-  teamDesc: "Founders and operators making strategic decisions",
-  agentsLabel: "AI Agents",
-  agentsDesc: "Run autonomously across your GTM",
-  systemsLabel: "AI Systems",
-  systemsDesc: "Infrastructure your team and agents use daily",
+  teamRoles: ["Founder", "First GTM Hire"],
+  capabilitiesLabel: "What they can now execute",
+  infrastructureLabel: "Running on",
+  infrastructureDesc: "AI-powered infrastructure that stays connected, optimised, and current",
 };
 
-export const OS_AGENTS = [
-  "Product Marketing",
-  "Content",
-  "SDR",
+export const CAPABILITIES = [
+  "Research & Positioning",
+  "Content & Distribution",
+  "Outbound & Pipeline",
   "Demand Gen",
   "Revenue Ops",
-  "CS Ops",
-  "Pipeline",
-  "Marketing Ops",
-  "Enablement",
-  "Analytics",
+  "Customer Ops",
 ];
 
-export const OS_SYSTEMS = [
+export const INFRASTRUCTURE = [
   "Messaging",
   "Brand Voice",
   "Website",

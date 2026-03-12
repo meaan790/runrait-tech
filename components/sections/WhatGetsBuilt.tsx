@@ -1,9 +1,9 @@
 "use client";
 
-import { Brain, Users, Bot, Cpu } from "lucide-react";
+import { User, UserPlus } from "lucide-react";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
-import { GTM_OS, OS_AGENTS, OS_SYSTEMS } from "@/lib/constants";
+import { GTM_OS, CAPABILITIES, INFRASTRUCTURE } from "@/lib/constants";
 
 export function WhatGetsBuilt() {
   return (
@@ -19,7 +19,7 @@ export function WhatGetsBuilt() {
           </p>
         </div>
 
-        {/* OS Stack */}
+        {/* Augmentation Visual */}
         <motion.div
           className="w-full max-w-[900px]"
           initial={{ opacity: 0, y: 30 }}
@@ -27,84 +27,68 @@ export function WhatGetsBuilt() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          {/* Knowledge Layer */}
-          <div className="rounded-t-[var(--radius)] border-2 border-accent bg-gradient-to-b from-[#0A2E2A] to-[#111111] px-8 py-6">
-            <div className="flex items-center gap-4">
-              <Brain className="h-6 w-6 shrink-0 text-accent" strokeWidth={1.5} />
-              <div className="flex flex-col gap-1">
-                <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-accent">
-                  {GTM_OS.knowledgeLabel}
-                </span>
-                <span className="text-sm text-text-secondary">
-                  {GTM_OS.knowledgeDesc}
-                </span>
-              </div>
-            </div>
-          </div>
-
           {/* Your Team */}
-          <div className="border-x border-b border-border bg-surface px-8 py-5">
-            <div className="flex items-center gap-4">
-              <Users className="h-5 w-5 shrink-0 text-accent" strokeWidth={1.5} />
-              <div className="flex flex-col gap-1">
-                <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-accent">
-                  {GTM_OS.teamLabel}
-                </span>
-                <span className="text-sm text-text-secondary">
-                  {GTM_OS.teamDesc}
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* AI Agents */}
-          <div className="border-x border-b border-accent bg-gradient-to-b from-[#0F1F1D] to-[#0A2E2A] px-8 py-6">
-            <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-4">
-                <Bot className="h-5 w-5 shrink-0 text-accent" strokeWidth={1.5} />
-                <div className="flex flex-col gap-1">
-                  <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-accent">
-                    {GTM_OS.agentsLabel}
-                  </span>
-                  <span className="text-xs text-text-secondary">
-                    {GTM_OS.agentsDesc}
-                  </span>
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {OS_AGENTS.map((agent) => (
-                  <span
-                    key={agent}
-                    className="rounded-[5px] border border-accent px-3 py-1.5 text-xs font-medium text-text-primary"
-                  >
-                    {agent}
-                  </span>
+          <div className="rounded-t-[var(--radius)] border-2 border-accent bg-gradient-to-b from-[#0A2E2A] to-[#111111] px-8 py-8">
+            <div className="flex flex-col items-center gap-5">
+              <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-accent">
+                {GTM_OS.teamLabel}
+              </span>
+              <div className="flex items-center gap-8">
+                {GTM_OS.teamRoles.map((role, i) => (
+                  <div key={role} className="flex flex-col items-center gap-2.5">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full border border-accent/40 bg-accent-muted">
+                      {i === 0 ? (
+                        <User className="h-5 w-5 text-accent" strokeWidth={1.5} />
+                      ) : (
+                        <UserPlus className="h-5 w-5 text-accent" strokeWidth={1.5} />
+                      )}
+                    </div>
+                    <span className="text-sm font-medium text-text-primary">
+                      {role}
+                    </span>
+                  </div>
                 ))}
               </div>
             </div>
           </div>
 
-          {/* AI Systems */}
+          {/* Capabilities */}
+          <div className="border-x border-b border-accent bg-[#0F1F1D] px-8 py-6">
+            <div className="flex flex-col gap-4">
+              <span className="text-center text-[10px] font-bold uppercase tracking-[0.15em] text-accent">
+                {GTM_OS.capabilitiesLabel}
+              </span>
+              <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
+                {CAPABILITIES.map((cap) => (
+                  <div
+                    key={cap}
+                    className="flex items-center justify-center rounded-[5px] border border-accent/40 bg-accent-muted/50 px-4 py-2.5 text-center text-xs font-medium text-text-primary"
+                  >
+                    {cap}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Infrastructure */}
           <div className="rounded-b-[var(--radius)] border-x border-b border-border bg-surface px-8 py-6">
             <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-4">
-                <Cpu className="h-5 w-5 shrink-0 text-accent" strokeWidth={1.5} />
-                <div className="flex flex-col gap-1">
-                  <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-accent">
-                    {GTM_OS.systemsLabel}
-                  </span>
-                  <span className="text-xs text-text-secondary">
-                    {GTM_OS.systemsDesc}
-                  </span>
-                </div>
+              <div className="flex flex-col items-center gap-1">
+                <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-text-tertiary">
+                  {GTM_OS.infrastructureLabel}
+                </span>
+                <span className="text-[11px] text-text-tertiary">
+                  {GTM_OS.infrastructureDesc}
+                </span>
               </div>
-              <div className="flex flex-wrap gap-2">
-                {OS_SYSTEMS.map((system) => (
+              <div className="flex flex-wrap justify-center gap-2">
+                {INFRASTRUCTURE.map((item) => (
                   <span
-                    key={system}
-                    className="rounded-[5px] bg-accent-muted px-3 py-1.5 text-xs text-text-secondary"
+                    key={item}
+                    className="rounded-[5px] bg-bg px-3 py-1.5 text-[11px] text-text-tertiary"
                   >
-                    {system}
+                    {item}
                   </span>
                 ))}
               </div>
@@ -112,11 +96,8 @@ export function WhatGetsBuilt() {
           </div>
         </motion.div>
 
-        {/* Body 2 + Closing */}
-        <p className="max-w-[680px] text-center text-base font-medium leading-relaxed text-text-secondary">
-          {GTM_OS.body2}
-        </p>
-        <p className="text-center text-sm italic text-text-tertiary">
+        {/* Closing */}
+        <p className="max-w-[640px] text-center text-sm italic text-text-tertiary">
           {GTM_OS.closing}
         </p>
       </div>
