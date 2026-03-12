@@ -133,7 +133,7 @@ export interface SystemCard {
 }
 
 export const WHAT_GETS_BUILT = {
-  headline: "The GTM team you\u2019d hire. Built for you as a system.",
+  headline: "The GTM team you\u2019d hire. Built for you as an operating system.",
   intro:
     "Every engagement is different. We build AI agents that run your GTM autonomously, and AI-powered systems your team uses daily. Here\u2019s what that looks like in practice.",
   agentsLabel: "AI agents",
@@ -143,7 +143,8 @@ export const WHAT_GETS_BUILT = {
   poweredLabel: "AI-powered systems",
   poweredIntro:
     "The infrastructure your team uses daily. AI sits across each one, keeping everything connected, optimised, and current.",
-  poweredFootnote: "Plus lead scoring, brand voice, design systems, email nurture, and more depending on what you need.",
+  poweredMore:
+    "Plus lead scoring, brand voice, design systems, email nurture, and more depending on what you need.",
 };
 
 export const FEATURED_AGENTS: SystemCard[] = [
