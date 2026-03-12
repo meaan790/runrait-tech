@@ -17,11 +17,11 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Runrait | AI-Powered GTM Systems for Startups",
   description:
-    "Runrait builds AI-powered go-to-market systems that give your team the output of a full GTM org. Scale revenue with a lean team.",
+    "Runrait builds AI agents and GTM systems that give your team the output of a full go-to-market org. From discovery through execution.",
   openGraph: {
     title: "Runrait | AI-Powered GTM Systems for Startups",
     description:
-      "Runrait builds AI-powered go-to-market systems that give your team the output of a full GTM org. Scale revenue with a lean team.",
+      "Runrait builds AI agents and GTM systems that give your team the output of a full go-to-market org. From discovery through execution.",
     url: "https://runrait.ai",
     siteName: "Runrait",
     type: "website",

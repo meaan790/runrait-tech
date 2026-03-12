@@ -1,11 +1,9 @@
 import { Navbar } from "@/components/sections/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { Problem } from "@/components/sections/Problem";
-import { TypicalOptions } from "@/components/sections/TypicalOptions";
-import { WhatRunraitDoes } from "@/components/sections/WhatRunraitDoes";
 import { HowItWorks } from "@/components/sections/HowItWorks";
-import { TheSystem } from "@/components/sections/TheSystem";
-import { Comparison } from "@/components/sections/Comparison";
+import { WhatGetsBuilt } from "@/components/sections/WhatGetsBuilt";
+import { NotAnAgency } from "@/components/sections/NotAnAgency";
 import { WhyItWorks } from "@/components/sections/WhyItWorks";
 import { WhoItsFor } from "@/components/sections/WhoItsFor";
 import { CTA } from "@/components/sections/CTA";
@@ -18,11 +16,9 @@ export default function Home() {
       <main>
         <Hero />
         <Problem />
-        <TypicalOptions />
-        <WhatRunraitDoes />
         <HowItWorks />
-        <TheSystem />
-        <Comparison />
+        <WhatGetsBuilt />
+        <NotAnAgency />
         <WhyItWorks />
         <WhoItsFor />
         <CTA />

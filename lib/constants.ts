@@ -2,6 +2,7 @@ import {
   UserSearch,
   Building2,
   Hourglass,
+  Package,
   Search,
   PenTool,
   Bot,
@@ -30,7 +31,7 @@ import {
 
 export const NAV_LINKS = [
   { label: "How It Works", href: "#how-it-works" },
-  { label: "Who It's For", href: "#who-its-for" },
+  { label: "What Gets Built", href: "#what-gets-built" },
 ];
 
 export const HERO = {
@@ -41,58 +42,43 @@ export const HERO = {
   ctaHref: "https://calendar.app.google/PmoSPF4DyqnD6akk6",
 };
 
-export const PROBLEM = {
-  headlineLine1: "You have product-market fit.",
-  headlineLine2: "You don\u2019t have a revenue engine yet.",
-  body: "You\u2019ve got customers. But growth looks like this:",
-  symptoms: [
-    { icon: User, label: "Revenue depends on you", detail: "Whether it\u2019s closing deals or driving adoption, growth only happens when you\u2019re pushing it. It works, but it doesn\u2019t scale." },
-    { icon: CircleX, label: "Disconnected tools", detail: "CRM half set up. Marketing disconnected from sales. Analytics you don\u2019t trust. Nothing connects." },
-    { icon: TrendingUp, label: "No repeatable process", detail: "Revenue grows when you push. It stalls when you stop. There\u2019s no system running without you." },
-  ],
-  closing: "You don\u2019t need more tactics. You need a revenue engine.",
-};
-
 export interface OptionCard {
   icon: LucideIcon;
   title: string;
   description: string;
 }
 
-export const TYPICAL_OPTIONS: {
-  headline: string;
-  cards: OptionCard[];
-  transition: string;
-} = {
-  headline: "The usual paths don\u2019t solve the problem.",
+export const PROBLEM = {
+  headlineLine1: "You have product-market fit.",
+  headlineLine2: "You don\u2019t have a revenue engine yet.",
+  body: "Customers are paying. But revenue growth is manual, founder-dependent, and not scaling.\n\nYou\u2019re doing sales from your inbox. Marketing is a landing page and some LinkedIn posts. The CRM is half set up. Nothing connects to anything.\n\nThe board is asking about pipeline. The next raise depends on showing repeatable revenue. And GTM keeps getting the leftover hours.",
   cards: [
     {
       icon: UserSearch,
       title: "Build a GTM team",
       description:
-        "$500k+ in salaries across 5 hires. 6\u201312 months before it\u2019s working. And you\u2019re managing a team.",
+        "$500k+ in salaries before anyone\u2019s ramped. 6\u201312 months before you see results. That\u2019s runway you don\u2019t have and time you can\u2019t afford.",
+    },
+    {
+      icon: Package,
+      title: "Buy a SaaS platform",
+      description:
+        "Off-the-shelf tools built for someone else\u2019s workflow. They don\u2019t know your market or your motion, and they rarely fit with what you\u2019re already using.",
     },
     {
       icon: Building2,
-      title: "Bring in an Agency",
+      title: "Hire an agency",
       description:
-        "Deliverables, not infrastructure. No one owns strategy. Pieces don\u2019t connect.",
+        "They\u2019ll run a channel or produce content, but they don\u2019t build systems. You get deliverables, not infrastructure. No one owns the strategy.",
     },
     {
       icon: Hourglass,
-      title: "Do It Yourself",
+      title: "Do it yourself",
       description:
-        "You\u2019re stretched across product, fundraising, and hiring. GTM gets whatever time is left.",
+        "You\u2019re already stretched across product, fundraising, and customer success. GTM gets whatever time is left, and it shows.",
     },
-  ],
-  transition: "There\u2019s a fourth option.",
-};
-
-export const WHAT_RUNRAIT_DOES = {
-  headline: "The GTM team you\u2019d hire. Built as a system.",
-  body: "Runrait embeds with your team and builds an AI-powered go-to-market system. Product marketing, demand gen, content, SDR, revenue ops, CS ops. AI agents and AI-powered systems that amplify what your team can do.",
-  body2: "We start with discovery to find the right motion for your product and market. Then we build iteratively, shipping components that generate results early, not a 6-month buildout you have to wait on. Each piece connects to the last, so the system compounds as it grows.",
-  body3: "You stay lean. Your capital goes further.\nAnd your revenue engine scales without your team needing to.",
+  ] as OptionCard[],
+  transition: "There is a better option.",
 };
 
 export interface PhaseCard {
@@ -104,27 +90,30 @@ export interface PhaseCard {
 
 export const HOW_IT_WORKS: {
   headline: string;
+  intro: string;
   phases: PhaseCard[];
 } = {
   headline: "Discover. Build. Run.",
+  intro:
+    "Every startup is at a different stage. We scope the engagement to where you actually are, not a fixed checklist.",
   phases: [
     {
       number: "01",
       title: "Discover",
       tagline: "Understand the right motion before building anything.",
-      body: "We dig into your product, market, customers, and current GTM state. We map the fastest path to repeatable revenue. Available as a standalone engagement.",
+      body: "We dig into your product, market, customers, and current GTM state. We map whether you\u2019re product-led, sales-led, or hybrid, and find the fastest path to repeatable revenue. You get a concrete GTM blueprint with priorities and system architecture.\n\nThis phase can be purchased standalone. Most founders choose to have us build it.",
     },
     {
       number: "02",
       title: "Build",
-      tagline: "Quick wins first. Full system over time.",
-      body: "We ship in chunks, not phases. You see results in weeks, not quarters. Each component goes live as it\u2019s ready, so value compounds while we\u2019re still building.",
+      tagline: "Build what\u2019s missing. Fix what\u2019s broken. Connect everything.",
+      body: "Based on the blueprint, we build the GTM system your startup needs. For some that means the full stack. For others it means connecting existing tools, rebuilding outbound, or standing up a measurement framework. Everything we build is connected, measurable, and yours. No lock-in.",
     },
     {
       number: "03",
       title: "Run",
       tagline: "Handover or ongoing. Your call.",
-      body: "We document everything and train your team for a clean handover. Or stay embedded month to month, optimising based on real data.",
+      body: "Once the system is live, you choose. We document everything and hand over a system your team can run independently. Or we stay embedded month to month, optimising based on real data and keeping the engine compounding.",
     },
   ],
 };
@@ -135,18 +124,26 @@ export interface SystemCard {
   description: string;
 }
 
-export const SYSTEM_AGENTS: SystemCard[] = [
+export const WHAT_GETS_BUILT = {
+  headline: "The GTM team you\u2019d hire. Built for you as a system.",
+  intro:
+    "Every engagement is different. We build AI agents that run your GTM autonomously, and AI-powered systems your team uses daily. Here\u2019s what that looks like in practice.",
+  agentsLabel: "AI agents",
+  agentsIntro:
+    "These run autonomously across your GTM. They research, create, outreach, manage pipeline, generate demand, and handle customer operations without adding headcount.",
+  agentsFootnote: "Every system is different. We scope yours during discovery.",
+  poweredLabel: "AI-powered systems",
+  poweredIntro:
+    "The infrastructure your team uses daily. AI sits across each one, keeping everything connected, optimised, and current.",
+  poweredFootnote: "Plus lead scoring, brand voice, design systems, email nurture, and more depending on what you need.",
+};
+
+export const FEATURED_AGENTS: SystemCard[] = [
   {
     icon: Search,
     title: "Product Marketing Agent",
     description:
-      "Runs competitive analysis, refines positioning, builds messaging frameworks, and keeps your ICP research current. Feeds strategy into content, campaigns, and outbound.",
-  },
-  {
-    icon: PenTool,
-    title: "Content Agent",
-    description:
-      "Generates content against your messaging framework, maintains publishing cadence, repurposes across channels, and distributes on schedule.",
+      "Runs competitive analysis, refines positioning, builds messaging frameworks, and keeps your ICP research current.",
   },
   {
     icon: Bot,
@@ -155,101 +152,42 @@ export const SYSTEM_AGENTS: SystemCard[] = [
       "Researches prospects, personalises outreach, sends sequences, handles replies, and books meetings. Runs 24/7 across your target accounts.",
   },
   {
-    icon: Megaphone,
-    title: "Demand Gen Agent",
-    description:
-      "Generates demand across channels, coordinates inbound and outbound motions, runs campaigns, and optimises based on performance data. Fills the top of your pipeline without a dedicated hire.",
-  },
-  {
     icon: Settings,
     title: "Revenue Ops Agent",
     description:
-      "Manages deal progression, flags stalled deals, triggers follow-ups, keeps CRM hygiene tight, and maintains pipeline accuracy. Your revenue operations run without anyone chasing them.",
+      "Manages deal progression, flags stalled deals, triggers follow-ups, and keeps CRM hygiene tight. Your revenue operations run without anyone chasing them.",
   },
   {
     icon: HeartHandshake,
     title: "CS Ops Agent",
     description:
-      "Monitors account health, prepares QBR data, flags churn risk, pulls usage reports, and surfaces expansion opportunities. Keeps CS operations tight without manual tracking.",
+      "Monitors account health, flags churn risk, prepares QBR data, and surfaces expansion opportunities.",
   },
 ];
 
-export const SYSTEM_POWERED: SystemCard[] = [
-  {
-    icon: Target,
-    title: "Messaging AI",
-    description:
-      "AI-driven research, competitor analysis, and message testing. Your team makes the strategic calls on a foundation of data, not guesswork.",
-  },
-  {
-    icon: Sparkles,
-    title: "Brand Voice AI",
-    description:
-      "Tone enforcement, copy review, and style guide alignment across all outputs. Keeps every touchpoint consistent without manual QA.",
-  },
-  {
-    icon: Globe,
-    title: "Website AI",
-    description:
-      "AI-built, conversion-optimised, and continuously tested. Connected to your analytics and updated based on performance data.",
-  },
-  {
-    icon: Palette,
-    title: "Design System AI",
-    description:
-      "Maintains visual consistency across every touchpoint. Templates, components, and brand assets that stay on-brand without design bottlenecks.",
-  },
-  {
-    icon: Database,
-    title: "Pipeline Management AI",
-    description:
-      "AI-configured deal stages, automated workflows, and pipeline hygiene. A single source of truth for your pipeline that stays clean on its own.",
-  },
-  {
-    icon: SlidersHorizontal,
-    title: "Lead Scoring AI",
-    description:
-      "Scores and routes based on behaviour and fit. Sets the rules, learns from outcomes, and gets sharper over time.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Analytics AI",
-    description:
-      "Surfaces insights, detects anomalies, and generates reports. Your team interprets and acts on what matters.",
-  },
-  {
-    icon: Presentation,
-    title: "Sales Enablement AI",
-    description:
-      "Generates decks, case studies, and objection handling materials from your data. Your team refines for context and uses them to close.",
-  },
-  {
-    icon: Mail,
-    title: "Email Nurture AI",
-    description:
-      "Drip campaigns, intent-based triggers, and lifecycle nurtures. Automated follow-up at scale, personalised to where each lead is in the journey.",
-  },
+export const FEATURED_SYSTEMS = [
+  "Messaging and positioning",
+  "Website and landing pages",
+  "Pipeline management",
+  "Analytics and reporting",
+  "Sales enablement",
 ];
 
-export const SYSTEM_SECTION = {
-  headline: "The system, not a stack of deliverables.",
-  intro:
-    "The scope is different for every startup. But here\u2019s what a complete GTM system looks like when all the pieces are in place.",
-  agentsLabel: "AI agents",
-  poweredLabel: "AI-powered systems",
-  closing: "Scoped to what you need. Connected as one system. Yours to keep.",
-};
-
-export const COMPARISON = {
+export const NOT_AN_AGENCY = {
   headline: "Not an agency. Not a hire. A system.",
-  headers: ["", "Agency", "GTM Hire", "Runrait"],
-  rows: [
-    ["What you get", "Tactics and deliverables", "A person (eventually)", "A working GTM system"],
-    ["Time to value", "Ongoing, incremental", "6\u201312 months", "Quick wins in weeks. Full system over time."],
-    ["Strategy included", "Rarely", "Depends on the hire", "Always. Discovery first."],
-    ["Execution included", "Partial (their channel)", "Depends on bandwidth", "End-to-end"],
-    ["System thinking", "Siloed", "Varies", "Core to the approach"],
-    ["Cost", "$5\u201315k/mo retainer", "$180\u2013250k+ salary", "Project-based, outcome-aligned"],
+  blocks: [
+    {
+      title: "Agencies sell tactics.",
+      body: "They\u2019ll run a channel. Write some content. Send you a report. But no one owns the strategy, the pieces don\u2019t connect, and when the retainer ends, nothing stays.",
+    },
+    {
+      title: "A GTM hire takes a year.",
+      body: "Finding, hiring, and ramping one senior person is 6\u201312 months. You need results now, not a recruitment process.",
+    },
+    {
+      title: "Runrait builds the system.",
+      body: "One engagement. Strategy through execution. AI agents and AI-powered systems that give your team the output of a full GTM function. Everything connected. Everything yours.",
+    },
   ],
 };
 
@@ -269,25 +207,25 @@ export const WHY_IT_WORKS: {
       icon: Search,
       title: "Discovery first.",
       description:
-        "We don\u2019t build until we understand your product, market, and the right motion. This prevents the number one mistake in early-stage GTM: building the wrong system for the wrong audience.",
+        "We don\u2019t build until we understand your product, market, and the right motion. This prevents the most common mistake in early-stage GTM: building the wrong system for the wrong audience.",
     },
     {
       icon: Layers,
-      title: "Quick wins, then compound.",
+      title: "Full stack, one engagement.",
       description:
-        "We don\u2019t disappear for 6 months and hand you a system. You get working pieces from week one. Each component goes live as it\u2019s ready, so results start before the full build is done.",
+        "Strategy, systems, agents, execution. No handoffs between five different vendors. Everything connects because it was built as one system.",
     },
     {
       icon: Zap,
       title: "AI amplifies your team.",
       description:
-        "Product marketing, demand gen, SDR, content, revenue ops, and CS ops run as AI agents alongside your team. A small team with the right system produces the output of a full GTM org.",
+        "The agents and systems we build give your startup the GTM output of a much larger team. You stay lean. The system scales.",
     },
     {
       icon: ShieldCheck,
       title: "You own everything.",
       description:
-        "No proprietary platforms. No lock-in. When we\u2019re done, the system is yours. We document everything so your team can operate and evolve it.",
+        "No proprietary platforms. No lock-in. When we\u2019re done, the system is yours. We document everything so your team can operate and evolve it independently.",
     },
   ],
 };
@@ -300,19 +238,19 @@ export interface FitItem {
 export const WHO_ITS_FOR = {
   headline:
     "Built for founders who want to scale revenue with a lean team.",
-  body: "Runrait works best with seed-to-Series-A startups (typically B2B SaaS, marketplace, fintech, or tech-enabled services) that have proven product-market fit but haven\u2019t built a scalable go-to-market system yet.",
+  body: "Runrait works best with seed-to-Series-A startups that have proven product-market fit but haven\u2019t built a scalable go-to-market system yet.",
   fitLabel: "You might be a fit if:",
   items: [
-    { icon: User, text: "You\u2019re the founder driving revenue and it\u2019s not scaling." },
-    { icon: CircleX, text: "You\u2019d rather spend capital on product and engineering than a GTM team." },
-    { icon: Users, text: "You\u2019ve tried an agency or a marketing hire and it didn\u2019t move the needle." },
-    { icon: Compass, text: "You have paying customers but no repeatable process to find more of them." },
-    { icon: CircleCheckBig, text: "You want the output of a GTM team without building one." },
+    { icon: TrendingUp, text: "You\u2019ve raised seed or Series A and need to show revenue growth." },
+    { icon: User, text: "You\u2019re the founder still doing sales and it\u2019s not scaling." },
+    { icon: CircleX, text: "You\u2019ve tried an agency or marketing hire and it didn\u2019t move the needle." },
+    { icon: Compass, text: "You know you need a GTM system but don\u2019t have the time or expertise to build it properly." },
+    { icon: CircleCheckBig, text: "You want to scale revenue without scaling headcount." },
   ] as FitItem[],
 };
 
 export const CTA_SECTION = {
   headline: "Start with Discovery.",
-  body: "Tell us where you\u2019re at and where the gaps are. If there\u2019s a fit, we\u2019ll map the path forward.",
+  body: "Every engagement begins with a conversation. Tell us where you\u2019re at and where the gaps are. If there\u2019s a fit, we\u2019ll map the path forward together.",
   submitLabel: "Book a Discovery Call",
 };

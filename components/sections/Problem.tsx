@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
+import { Card } from "@/components/ui/Card";
 import { PROBLEM } from "@/lib/constants";
 
 export function Problem() {
@@ -17,27 +18,25 @@ export function Problem() {
           </h2>
         </div>
 
-        <p className="max-w-[600px] text-center text-lg leading-relaxed text-text-secondary">
+        <p className="max-w-[680px] whitespace-pre-line text-center text-lg leading-relaxed text-text-secondary">
           {PROBLEM.body}
         </p>
 
-        <div className="grid w-full max-w-[1200px] grid-cols-1 gap-6 md:grid-cols-3">
-          {PROBLEM.symptoms.map((symptom, i) => (
+        <div className="grid w-full max-w-[1200px] grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {PROBLEM.cards.map((card, i) => (
             <motion.div
-              key={symptom.label}
-              className="flex flex-col gap-4 rounded-(--radius) border border-border bg-surface p-7"
+              key={card.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.4 }}
             >
-              <symptom.icon className="h-6 w-6 text-accent" strokeWidth={1.5} />
-              <span className="text-base font-semibold text-text-primary">
-                {symptom.label}
-              </span>
-              <span className="text-sm leading-relaxed text-text-secondary">
-                {symptom.detail}
-              </span>
+              <Card
+                icon={card.icon}
+                title={card.title}
+                description={card.description}
+                className="h-full"
+              />
             </motion.div>
           ))}
         </div>
@@ -49,7 +48,7 @@ export function Problem() {
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
         >
-          {PROBLEM.closing}
+          {PROBLEM.transition}
         </motion.p>
       </div>
     </SectionWrapper>

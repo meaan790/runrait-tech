@@ -12,6 +12,10 @@ export function HowItWorks() {
           {HOW_IT_WORKS.headline}
         </h2>
 
+        <p className="max-w-[680px] text-center text-lg leading-relaxed text-text-secondary">
+          {HOW_IT_WORKS.intro}
+        </p>
+
         <div className="flex w-full max-w-[800px] flex-col gap-5">
           {HOW_IT_WORKS.phases.map((phase, i) => (
             <motion.div
