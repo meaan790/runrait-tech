@@ -32,9 +32,7 @@ export function FlowVisual() {
         >
           <div
             className={`flex flex-col items-center gap-2.5 rounded-[var(--radius)] border bg-surface px-4 py-5 sm:w-[140px] ${
-              i === 1
-                ? "border-accent"
-                : "border-border"
+              i === 1 ? "border-accent" : "border-border"
             }`}
           >
             <step.icon className="h-6 w-6 text-accent" strokeWidth={1.5} />

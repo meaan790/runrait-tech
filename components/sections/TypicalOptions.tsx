@@ -3,27 +3,18 @@
 import { motion } from "framer-motion";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { Card } from "@/components/ui/Card";
-import { PROBLEM } from "@/lib/constants";
+import { TYPICAL_OPTIONS } from "@/lib/constants";
 
-export function Problem() {
+export function TypicalOptions() {
   return (
-    <SectionWrapper bg="alt">
-      <div className="flex flex-col items-center gap-12 py-20 md:py-[100px]">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold leading-[1.2] text-text-primary md:text-[40px]">
-            {PROBLEM.headlineLine1}
-          </h2>
-          <h2 className="mt-2 text-3xl font-bold leading-[1.2] text-text-secondary md:text-[40px]">
-            {PROBLEM.headlineLine2}
-          </h2>
-        </div>
+    <SectionWrapper bg="dark">
+      <div className="flex flex-col items-center gap-12 py-24 md:py-[100px]">
+        <h2 className="text-center text-3xl font-bold leading-[1.2] text-text-primary md:text-[40px]">
+          {TYPICAL_OPTIONS.headline}
+        </h2>
 
-        <p className="max-w-[680px] whitespace-pre-line text-center text-lg leading-relaxed text-text-secondary">
-          {PROBLEM.body}
-        </p>
-
-        <div className="grid w-full max-w-[1200px] grid-cols-1 gap-6 md:grid-cols-3">
-          {PROBLEM.cards.map((card, i) => (
+        <div className="grid w-full max-w-[1200px] grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {TYPICAL_OPTIONS.cards.map((card, i) => (
             <motion.div
               key={card.title}
               initial={{ opacity: 0, y: 20 }}
@@ -48,7 +39,7 @@ export function Problem() {
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
         >
-          {PROBLEM.transition}
+          {TYPICAL_OPTIONS.transition}
         </motion.p>
       </div>
     </SectionWrapper>

@@ -40,6 +40,31 @@ export const PROBLEM = {
   body: "Customers are paying. But revenue growth is manual, founder-dependent, and not scaling.\n\nYou\u2019re doing sales from your inbox. Marketing is a landing page and some LinkedIn posts. The CRM is half set up. Nothing connects to anything.\n\nThe board is asking about pipeline. The next raise depends on showing repeatable revenue. And GTM keeps getting the leftover hours.",
   cards: [
     {
+      icon: User,
+      title: "Founder-led sales",
+      description:
+        "You\u2019re closing every deal yourself. It works, but it doesn\u2019t scale.",
+    },
+    {
+      icon: CircleX,
+      title: "Disconnected tools",
+      description:
+        "CRM half set up. Outbound inconsistent. Analytics you don\u2019t trust. Nothing connects.",
+    },
+    {
+      icon: TrendingUp,
+      title: "No repeatable process",
+      description:
+        "Revenue grows when you push. It stalls when you stop. There\u2019s no system running without you.",
+    },
+  ] as OptionCard[],
+  transition: "You don\u2019t need more tactics. You need a revenue engine.",
+};
+
+export const TYPICAL_OPTIONS = {
+  headline: "The usual paths don\u2019t solve the problem.",
+  cards: [
+    {
       icon: UserSearch,
       title: "Build a GTM team",
       description:
@@ -65,6 +90,15 @@ export const PROBLEM = {
     },
   ] as OptionCard[],
   transition: "There is a better option.",
+};
+
+export const WHAT_RUNRAIT_DOES = {
+  headline: "Your GTM system.\nDesigned, built, and ready to run.",
+  body: "Runrait embeds with your team and builds an AI-powered go-to-market system. Product marketing, demand gen, content, SDR, revenue ops, CS ops. AI agents and AI-powered systems that amplify what your team can do.",
+  body2:
+    "We start with discovery to find the right motion for your product and market. Then we build iteratively, shipping components that generate results early, not a 6-month buildout you have to wait on. Each piece connects to the last, so the system compounds as it grows.",
+  body3:
+    "You stay lean. Your capital goes further.\nAnd your revenue engine scales without your team needing to.",
 };
 
 export interface PhaseCard {
