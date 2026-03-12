@@ -101,19 +101,19 @@ export const HOW_IT_WORKS: {
       number: "01",
       title: "Discover",
       tagline: "Understand the right motion before building anything.",
-      body: "We dig into your product, market, customers, and current GTM state. We map whether you\u2019re product-led, sales-led, or hybrid, and find the fastest path to repeatable revenue. You get a concrete GTM blueprint with priorities and system architecture.\n\nThis phase can be purchased standalone. Most founders choose to have us build it.",
+      body: "We dig into your product, market, customers, and current GTM state. We map the fastest path to repeatable revenue. Available as a standalone engagement.",
     },
     {
       number: "02",
       title: "Build",
-      tagline: "Build what\u2019s missing. Fix what\u2019s broken. Connect everything.",
-      body: "Based on the blueprint, we build the GTM system your startup needs. For some that means the full stack. For others it means connecting existing tools, rebuilding outbound, or standing up a measurement framework. Everything we build is connected, measurable, and yours. No lock-in.",
+      tagline: "Quick wins first. Full system over time.",
+      body: "We ship in chunks, not phases. You see results in weeks, not quarters. Each component goes live as it\u2019s ready, so value compounds while we\u2019re still building.",
     },
     {
       number: "03",
       title: "Run",
       tagline: "Handover or ongoing. Your call.",
-      body: "Once the system is live, you choose. We document everything and hand over a system your team can run independently. Or we stay embedded month to month, optimising based on real data and keeping the engine compounding.",
+      body: "We document everything and train your team for a clean handover. Or stay embedded month to month, optimising based on real data.",
     },
   ],
 };
