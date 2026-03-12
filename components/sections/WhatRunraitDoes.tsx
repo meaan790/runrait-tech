@@ -17,11 +17,8 @@ export function WhatRunraitDoes() {
             <span className="font-bold text-accent">Runrait</span>{" "}
             {WHAT_RUNRAIT_DOES.body.replace("Runrait ", "")}
           </p>
-          <p className="text-lg leading-relaxed text-text-secondary">
-            {WHAT_RUNRAIT_DOES.body2}
-          </p>
           <p className="whitespace-pre-line text-base font-medium leading-relaxed text-text-primary">
-            {WHAT_RUNRAIT_DOES.body3}
+            {WHAT_RUNRAIT_DOES.body2}
           </p>
         </div>
 
