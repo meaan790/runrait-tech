@@ -1,4 +1,8 @@
 import {
+  UserSearch,
+  Building2,
+  Hourglass,
+  Package,
   Search,
   PenTool,
   Bot,
@@ -38,54 +42,42 @@ export const HERO = {
   ctaHref: "https://calendar.app.google/PmoSPF4DyqnD6akk6",
 };
 
+export interface OptionCard {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+}
+
 export const PROBLEM = {
   headlineLine1: "You have product-market fit.",
   headlineLine2: "You don\u2019t have a revenue engine yet.",
-  haves: [
-    "Paying customers",
-    "Real traction",
-    "Strong product",
-  ],
-  haveNots: [
-    "Repeatable pipeline",
-    "Connected systems",
-    "Scalable GTM",
-    "Dedicated team",
-  ],
-  options: [
+  body: "Customers are paying. But revenue growth is manual, founder-dependent, and not scaling.\n\nYou\u2019re doing sales from your inbox. Marketing is a landing page and some LinkedIn posts. The CRM is half set up. Nothing connects to anything.\n\nThe board is asking about pipeline. The next raise depends on showing repeatable revenue. And GTM keeps getting the leftover hours.",
+  cards: [
     {
+      icon: UserSearch,
       title: "Build a GTM team",
-      items: [
-        { text: "$500k+ salaries", pass: false },
-        { text: "6\u201312 month ramp", pass: false },
-        { text: "Burns runway", pass: false },
-      ],
+      description:
+        "$500k+ in salaries before anyone\u2019s ramped. 6\u201312 months before you see results. That\u2019s runway you don\u2019t have and time you can\u2019t afford.",
     },
     {
+      icon: Package,
       title: "Buy a SaaS platform",
-      items: [
-        { text: "Generic workflows", pass: false },
-        { text: "No market context", pass: false },
-        { text: "Integration headaches", pass: false },
-      ],
+      description:
+        "Off-the-shelf tools built for someone else\u2019s workflow. They don\u2019t know your market or your motion, and they rarely fit with what you\u2019re already using.",
     },
     {
+      icon: Building2,
       title: "Hire an agency",
-      items: [
-        { text: "Deliverables only", pass: false },
-        { text: "No systems", pass: false },
-        { text: "No strategy ownership", pass: false },
-      ],
+      description:
+        "They\u2019ll run a channel or produce content, but they don\u2019t build systems. You get deliverables, not infrastructure. No one owns the strategy.",
     },
     {
+      icon: Hourglass,
       title: "Do it yourself",
-      items: [
-        { text: "Already stretched", pass: false },
-        { text: "Leftover hours", pass: false },
-        { text: "It shows", pass: false },
-      ],
+      description:
+        "You\u2019re already stretched across product, fundraising, and customer success. GTM gets whatever time is left, and it shows.",
     },
-  ],
+  ] as OptionCard[],
   transition: "There is a better option.",
 };
 
