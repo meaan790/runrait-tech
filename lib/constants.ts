@@ -4,26 +4,12 @@ import {
   Hourglass,
   Package,
   Search,
-  PenTool,
-  Bot,
-  Megaphone,
-  Settings,
-  HeartHandshake,
-  Target,
-  Globe,
-  Database,
-  SlidersHorizontal,
   TrendingUp,
-  Presentation,
-  Mail,
-  Sparkles,
-  Palette,
   Layers,
   Zap,
   ShieldCheck,
   User,
   CircleX,
-  Users,
   Compass,
   CircleCheckBig,
   type LucideIcon,
@@ -118,60 +104,54 @@ export const HOW_IT_WORKS: {
   ],
 };
 
-export interface SystemCard {
-  icon: LucideIcon;
-  title: string;
-  description: string;
-}
-
-export const WHAT_GETS_BUILT = {
+export const GTM_OS = {
   headline: "The GTM team you\u2019d hire. Built for you as an operating system.",
   intro:
-    "Every engagement is different. We build AI agents that run your GTM autonomously, and AI-powered systems your team uses daily. Here\u2019s what that looks like in practice.",
-  agentsLabel: "AI agents",
-  agentsIntro:
-    "These run autonomously across your GTM. They research, create, outreach, manage pipeline, generate demand, and handle customer operations without adding headcount.",
-  agentsFootnote: "Every system is different. We scope yours during discovery.",
-  poweredLabel: "AI-powered systems",
-  poweredIntro:
-    "The infrastructure your team uses daily. AI sits across each one, keeping everything connected, optimised, and current.",
-  poweredMore:
-    "Plus lead scoring, brand voice, design systems, email nurture, and more depending on what you need.",
+    "Your operating system is built around two layers. AI agents that run your GTM autonomously, and AI-powered systems your team uses every day.",
+  body2:
+    "The agents do the work. The systems give your team the infrastructure to make better decisions, faster.",
+  closing:
+    "Every operating system is different. Yours is scoped during discovery based on your product, your market, and where you are right now.",
+  knowledgeLabel: "Knowledge Layer",
+  knowledgeDesc:
+    "Scoped during discovery based on your product, market, and where you are right now",
+  teamLabel: "Your Team",
+  teamDesc: "Founders and operators making strategic decisions",
+  agentsLabel: "AI Agents",
+  agentsDesc: "Run autonomously across your GTM",
+  systemsLabel: "AI Systems",
+  systemsDesc: "Infrastructure your team and agents use daily",
 };
 
-export const FEATURED_AGENTS: SystemCard[] = [
-  {
-    icon: Search,
-    title: "Product Marketing Agent",
-    description:
-      "Runs competitive analysis, refines positioning, builds messaging frameworks, and keeps your ICP research current.",
-  },
-  {
-    icon: Bot,
-    title: "SDR Agent",
-    description:
-      "Researches prospects, personalises outreach, sends sequences, handles replies, and books meetings. Runs 24/7 across your target accounts.",
-  },
-  {
-    icon: Settings,
-    title: "Revenue Ops Agent",
-    description:
-      "Manages deal progression, flags stalled deals, triggers follow-ups, and keeps CRM hygiene tight. Your revenue operations run without anyone chasing them.",
-  },
-  {
-    icon: HeartHandshake,
-    title: "CS Ops Agent",
-    description:
-      "Monitors account health, flags churn risk, prepares QBR data, and surfaces expansion opportunities.",
-  },
+export const OS_AGENTS = [
+  "Product Marketing",
+  "Content",
+  "SDR",
+  "Demand Gen",
+  "Revenue Ops",
+  "CS Ops",
+  "Pipeline",
+  "Marketing Ops",
+  "Enablement",
+  "Analytics",
 ];
 
-export const FEATURED_SYSTEMS = [
-  "Messaging and positioning",
-  "Website and landing pages",
-  "Pipeline management",
-  "Analytics and reporting",
-  "Sales enablement",
+export const OS_SYSTEMS = [
+  "Messaging",
+  "Brand Voice",
+  "Website",
+  "Design System",
+  "Pipeline Management",
+  "Lead Scoring",
+  "Analytics",
+  "Sales Enablement",
+  "Email Nurture",
+  "Onboarding",
+  "Competitive Intelligence",
+  "Social",
+  "SEO",
+  "Data Enrichment",
+  "Attribution",
 ];
 
 export const COMPARISON = {
