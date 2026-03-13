@@ -115,7 +115,7 @@ export const HOW_IT_WORKS: {
       number: "02",
       title: "Build",
       tagline: "Quick wins first. Full system over time.",
-      body: "We ship in chunks, not phases. You see results in weeks, not quarters. Each component goes live as it\u2019s ready, so value compounds while we\u2019re still building.",
+      body: "We ship in sprints, not full projects. You get outcomes in your first sprint, not quarters. Each component goes live as it\u2019s ready, so value compounds while we\u2019re still building.",
     },
     {
       number: "03",
