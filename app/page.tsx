@@ -11,7 +11,7 @@ import { CTA } from "@/components/sections/CTA";
 import { Footer } from "@/components/sections/Footer";
 import { FAQ_ITEMS } from "@/lib/constants";
 
-const siteUrl = "https://meaan790.github.io/runrait-tech";
+const siteUrl = "https://runrait.ai";
 
 const organizationJsonLd = {
   "@context": "https://schema.org",

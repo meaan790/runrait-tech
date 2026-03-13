@@ -14,7 +14,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const siteUrl = "https://meaan790.github.io/runrait-tech";
+const siteUrl = "https://runrait.ai";
 const description =
   "Runrait builds AI agents and GTM operating systems that give founders the output of a full go-to-market team. Without the headcount. From discovery through execution.";
 const ogDescription =
