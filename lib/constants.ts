@@ -40,19 +40,19 @@ export const PROBLEM = {
       icon: User,
       title: "Founder-led sales",
       description:
-        "You\u2019re closing every deal yourself. It works, but it doesn\u2019t scale.",
+        "Every deal runs through you. It works today, but it won\u2019t at scale.",
     },
     {
       icon: CircleX,
       title: "Disconnected tools",
       description:
-        "CRM half set up. Outbound inconsistent. Analytics you don\u2019t trust. Nothing connects.",
+        "Half-built CRM. Inconsistent outbound. Analytics you don\u2019t trust. Systems don\u2019t connect.",
     },
     {
       icon: TrendingUp,
       title: "No repeatable process",
       description:
-        "Revenue grows when you push. It stalls when you stop. There\u2019s no system running without you.",
+        "Revenue moves when you push. Stalls when you don\u2019t. There\u2019s no engine running underneath.",
     },
   ] as OptionCard[],
   transition: "You don\u2019t need more tactics. You need a repeatable system that powers revenue.",
@@ -65,25 +65,25 @@ export const TYPICAL_OPTIONS = {
       icon: UserSearch,
       title: "Build a GTM team",
       description:
-        "$500k+ in salaries before anyone\u2019s ramped. 6\u201312 months before you see results. That\u2019s runway you don\u2019t have and time you can\u2019t afford.",
+        "$500k+ in salaries before anyone\u2019s ramped. 6\u201312 months before impact. That\u2019s runway you can\u2019t afford.",
     },
     {
       icon: Package,
       title: "Buy a SaaS platform",
       description:
-        "Off-the-shelf tools built for someone else\u2019s workflow. They don\u2019t know your market or your motion, and they rarely fit with what you\u2019re already using.",
+        "Multiple platforms that don\u2019t integrate, don\u2019t fit your workflow, and force you to work around them instead of with them.",
     },
     {
       icon: Building2,
       title: "Hire an agency",
       description:
-        "They\u2019ll run a channel or produce content, but they don\u2019t build systems. You get deliverables, not infrastructure. No one owns the strategy.",
+        "They\u2019ll run a channel or produce content, but they don\u2019t build systems. You get deliverables with no foundations underneath.",
     },
     {
       icon: Hourglass,
       title: "Do it yourself",
       description:
-        "You\u2019re already stretched across product, fundraising, and customer success. GTM gets whatever time is left, and it shows.",
+        "Every hour your team spends stitching together GTM is an hour pulled from product, customers, and fundraising.",
     },
   ] as OptionCard[],
   transition: "There is a 5th option.",

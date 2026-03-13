@@ -74,7 +74,7 @@ export function Hero() {
           </div>
           <div className="flex flex-col items-center gap-0.5">
             <span className="text-sm text-accent">Full GTM output</span>
-            <span className="text-xs text-text-secondary">Results in weeks</span>
+            <span className="text-xs text-text-secondary">Impact in your first sprint</span>
           </div>
         </div>
       </motion.div>
