@@ -12,7 +12,7 @@ export function HowItWorks() {
           {HOW_IT_WORKS.headline}
         </h2>
 
-        <p className="max-w-[680px] text-center text-lg leading-relaxed text-text-secondary">
+        <p className="max-w-[820px] text-center text-lg leading-relaxed text-text-secondary">
           {HOW_IT_WORKS.intro}
         </p>
 

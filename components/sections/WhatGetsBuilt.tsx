@@ -41,7 +41,7 @@ function TraditionalView() {
 
       <div className="flex flex-col items-center gap-1">
         <span className="text-lg font-bold text-text-tertiary">
-          {GTM_OS.traditionalCost}
+          {TRADITIONAL_ROLES.length} hires &middot; {GTM_OS.traditionalCost}
         </span>
       </div>
     </motion.div>
@@ -49,17 +49,15 @@ function TraditionalView() {
 }
 
 function RunraitView() {
-  const [agentsExpanded, setAgentsExpanded] = useState(false);
-
   return (
     <motion.div
-      className="flex w-full flex-col items-center gap-0"
+      className="flex w-full flex-col items-center"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.4 }}
     >
-      {/* Founder + GTM Hire */}
+      {/* Founder + GTM Hires */}
       <div className="flex flex-col items-center gap-6 sm:flex-row sm:gap-10">
         <motion.div
           className="flex flex-col items-center gap-2.5 rounded-[10px] border border-border bg-surface px-7 py-5"
@@ -74,105 +72,112 @@ function RunraitView() {
           <span className="text-[10px] text-text-tertiary">Strategy &amp; oversight</span>
         </motion.div>
 
-        <motion.button
-          className="flex cursor-pointer flex-col items-center gap-2.5 rounded-[10px] border-2 border-accent bg-gradient-to-b from-[#0A2E2A] to-[#111111] px-7 py-5 transition-shadow hover:shadow-[0_0_20px_rgba(0,229,204,0.15)]"
+        <motion.div
+          className="flex flex-col items-center gap-2.5 rounded-[10px] border-2 border-accent bg-gradient-to-b from-[#0A2E2A] to-[#111111] px-7 py-5"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.3, delay: 0.2 }}
-          onClick={() => setAgentsExpanded(!agentsExpanded)}
         >
           <div className="flex h-12 w-12 items-center justify-center rounded-full border border-accent/40 bg-accent-muted">
             <UserPlus className="h-5 w-5 text-accent" strokeWidth={1.5} />
           </div>
-          <span className="text-sm font-semibold text-text-primary">GTM Hire</span>
-          <span className="text-[10px] text-accent">
-            {agentsExpanded ? "Click to collapse" : "Click to expand AI team"}
-          </span>
-        </motion.button>
+          <span className="text-sm font-semibold text-text-primary">GTM Hires</span>
+          <span className="text-[10px] text-accent">2 people &middot; Augmented by AI</span>
+        </motion.div>
       </div>
 
       {/* Connecting line */}
-      <AnimatePresence>
-        {agentsExpanded && (
-          <motion.div
-            className="flex flex-col items-center"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="h-8 w-px bg-accent/40" />
+      <motion.div
+        className="h-8 w-px bg-accent/40"
+        initial={{ scaleY: 0 }}
+        animate={{ scaleY: 1 }}
+        transition={{ duration: 0.3, delay: 0.3 }}
+        style={{ transformOrigin: "top" }}
+      />
 
-            {/* AI Agents */}
-            <div className="flex flex-col items-center gap-4">
-              <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-accent">
-                AI Agents
+      {/* AI Agents */}
+      <div className="flex w-full flex-col items-center gap-4">
+        <motion.span
+          className="text-[10px] font-bold uppercase tracking-[0.15em] text-accent"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3, delay: 0.35 }}
+        >
+          AI Agents &middot; {GTM_HIRE_AGENTS.length}
+        </motion.span>
+        <div className="flex flex-wrap justify-center gap-2.5">
+          {GTM_HIRE_AGENTS.map((agent, i) => (
+            <motion.div
+              key={agent.name}
+              className="relative flex w-[130px] flex-col items-center gap-1.5 rounded-[8px] border border-accent/50 bg-[#0F1F1D] px-3 py-3"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.25, delay: 0.4 + i * 0.06 }}
+            >
+              <span className="absolute -top-2 left-1/2 -translate-x-1/2 rounded-[3px] bg-accent px-1.5 py-px text-[7px] font-bold uppercase tracking-wider text-bg">
+                Agent
               </span>
-              <div className="flex flex-wrap justify-center gap-2.5">
-                {GTM_HIRE_AGENTS.map((agent, i) => (
-                  <motion.div
-                    key={agent.name}
-                    className="relative flex w-[130px] flex-col items-center gap-1.5 rounded-[8px] border border-accent/50 bg-[#0F1F1D] px-3 py-3"
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.25, delay: i * 0.06 }}
-                  >
-                    <span className="absolute -top-2 left-1/2 -translate-x-1/2 rounded-[3px] bg-accent px-1.5 py-px text-[7px] font-bold uppercase tracking-wider text-bg">
-                      Agent
-                    </span>
-                    <Bot className="mt-1.5 h-3.5 w-3.5 text-accent" strokeWidth={1.5} />
-                    <span className="text-center text-[10px] font-medium leading-tight text-text-primary">
-                      {agent.name}
-                    </span>
-                    <span className="text-center text-[8px] leading-tight text-text-tertiary">
-                      {agent.desc}
-                    </span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            {/* Connecting line to systems */}
-            <div className="my-4 h-6 w-px bg-border" />
-
-            {/* AI Systems */}
-            <div className="flex flex-col items-center gap-4">
-              <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-text-tertiary">
-                AI-Powered Systems
+              <Bot className="mt-1.5 h-3.5 w-3.5 text-accent" strokeWidth={1.5} />
+              <span className="text-center text-[10px] font-medium leading-tight text-text-primary">
+                {agent.name}
               </span>
-              <div className="flex flex-wrap justify-center gap-2">
-                {GTM_HIRE_SYSTEMS.map((system, i) => (
-                  <motion.div
-                    key={system.name}
-                    className="relative flex w-[110px] flex-col items-center gap-1 rounded-[8px] border border-dashed border-border bg-surface px-2.5 py-2.5"
-                    initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.2, delay: 0.4 + i * 0.03 }}
-                  >
-                    <span className="absolute -top-2 left-1/2 -translate-x-1/2 rounded-[3px] bg-[#252530] px-1.5 py-px text-[7px] font-bold uppercase tracking-wider text-text-tertiary">
-                      System
-                    </span>
-                    <Cpu className="mt-1.5 h-3 w-3 text-text-tertiary" strokeWidth={1.5} />
-                    <span className="text-center text-[10px] font-medium leading-tight text-text-primary">
-                      {system.name}
-                    </span>
-                    <span className="text-center text-[8px] leading-tight text-text-tertiary">
-                      {system.desc}
-                    </span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              <span className="text-center text-[8px] leading-tight text-text-tertiary">
+                {agent.desc}
+              </span>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Connecting line to systems */}
+      <motion.div
+        className="my-4 h-6 w-px bg-border"
+        initial={{ scaleY: 0 }}
+        animate={{ scaleY: 1 }}
+        transition={{ duration: 0.3, delay: 0.9 }}
+        style={{ transformOrigin: "top" }}
+      />
+
+      {/* AI Systems */}
+      <div className="flex w-full flex-col items-center gap-4">
+        <motion.span
+          className="text-[10px] font-bold uppercase tracking-[0.15em] text-text-tertiary"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3, delay: 0.95 }}
+        >
+          AI-Powered Systems &middot; {GTM_HIRE_SYSTEMS.length}
+        </motion.span>
+        <div className="flex flex-wrap justify-center gap-2">
+          {GTM_HIRE_SYSTEMS.map((system, i) => (
+            <motion.div
+              key={system.name}
+              className="relative flex w-[110px] flex-col items-center gap-1 rounded-[8px] border border-dashed border-border bg-surface px-2.5 py-2.5"
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.2, delay: 1.0 + i * 0.03 }}
+            >
+              <span className="absolute -top-2 left-1/2 -translate-x-1/2 rounded-[3px] bg-[#252530] px-1.5 py-px text-[7px] font-bold uppercase tracking-wider text-text-tertiary">
+                System
+              </span>
+              <Cpu className="mt-1.5 h-3 w-3 text-text-tertiary" strokeWidth={1.5} />
+              <span className="text-center text-[10px] font-medium leading-tight text-text-primary">
+                {system.name}
+              </span>
+              <span className="text-center text-[8px] leading-tight text-text-tertiary">
+                {system.desc}
+              </span>
+            </motion.div>
+          ))}
+        </div>
+      </div>
 
       {/* Stats */}
       <motion.div
         className="mt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.4, delay: 0.3 }}
+        transition={{ duration: 0.4, delay: 1.5 }}
       >
         {[
           { val: "2", label: "People" },
@@ -207,7 +212,7 @@ export function WhatGetsBuilt() {
           <h2 className="max-w-[800px] text-3xl font-bold leading-[1.2] text-text-primary md:text-[40px]">
             {GTM_OS.headline}
           </h2>
-          <p className="max-w-[600px] text-base leading-relaxed text-text-secondary">
+          <p className="max-w-[820px] text-base leading-relaxed text-text-secondary">
             {GTM_OS.intro}
           </p>
         </div>
@@ -248,7 +253,7 @@ export function WhatGetsBuilt() {
         </div>
 
         {/* Closing */}
-        <p className="max-w-[640px] text-center text-sm italic text-text-tertiary">
+        <p className="max-w-[820px] text-center text-sm italic text-text-tertiary">
           {GTM_OS.closing}
         </p>
       </div>

@@ -18,7 +18,7 @@ export function Problem() {
           </h2>
         </div>
 
-        <p className="max-w-[680px] whitespace-pre-line text-center text-lg leading-relaxed text-text-secondary">
+        <p className="max-w-[820px] text-center text-lg leading-relaxed text-text-secondary">
           {PROBLEM.body}
         </p>
 
