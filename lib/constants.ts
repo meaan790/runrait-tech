@@ -55,7 +55,7 @@ export const PROBLEM = {
         "Revenue grows when you push. It stalls when you stop. There\u2019s no system running without you.",
     },
   ] as OptionCard[],
-  transition: "You don\u2019t need more tactics. You need a repeatable system to power revenue.",
+  transition: "You don\u2019t need more tactics. You need a repeatable system that powers revenue.",
 };
 
 export const TYPICAL_OPTIONS = {
@@ -215,9 +215,14 @@ export interface FAQItem {
 
 export const FAQ_ITEMS: FAQItem[] = [
   {
+    question: "What is a GTM operating system?",
+    answer:
+      "A GTM operating system is the complete infrastructure a startup needs to generate and convert pipeline. It combines AI agents that run autonomously (research, outreach, pipeline management, customer operations) with AI-powered systems your team uses daily (messaging, website, CRM, analytics, enablement). Everything is connected as one system, not a stack of disconnected tools.",
+  },
+  {
     question: "What is Runrait?",
     answer:
-      "Runrait builds AI-powered go-to-market systems for startups. We embed with your founding team, build AI agents that run your GTM autonomously, and set up the AI-powered systems your team uses daily. The result is the output of a full go-to-market org without the headcount.",
+      "Runrait builds AI-powered go-to-market operating systems for startups. We embed with your founding team, build AI agents that run your GTM autonomously, and set up the AI-powered systems your team uses daily. The result is the output of a full go-to-market org without the headcount.",
   },
   {
     question: "How is Runrait different from a marketing agency?",
@@ -227,7 +232,17 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "What kind of startups does Runrait work with?",
     answer:
-      "We work best with seed-to-Series A startups in New Zealand and Australia that have proven product-market fit but haven't built a scalable revenue engine yet. If you're a founder still doing sales yourself and you know it's not scaling, you're exactly who we built this for.",
+      "Seed-to-Series A startups in New Zealand and Australia that have product-market fit but no repeatable path to revenue. Typically B2B SaaS, marketplace, fintech, or tech-enabled services. Founders who want to scale revenue without scaling headcount.",
+  },
+  {
+    question: "What are GTM AI agents?",
+    answer:
+      "GTM AI agents are autonomous systems that handle go-to-market functions without adding headcount. Examples include SDR agents that research prospects and book meetings, revenue ops agents that manage pipeline and trigger follow-ups, product marketing agents that track competitors and refine positioning, and CS ops agents that monitor account health and flag churn risk.",
+  },
+  {
+    question: "Do I need to hire a Head of Growth or GTM engineer?",
+    answer:
+      "Not to get the system built. Runrait builds and can run the GTM operating system for you. If you hire a growth lead or GTM engineer later, they inherit a working system instead of starting from scratch. The operating system makes any future hire more effective from day one.",
   },
   {
     question: "How long does it take to see results?",
@@ -235,24 +250,24 @@ export const FAQ_ITEMS: FAQItem[] = [
       "You'll see outcomes in your first sprint. We ship in sprints, not full projects, so value compounds while we're still building. Most founders see meaningful pipeline impact within the first few weeks.",
   },
   {
-    question: "Do I need to hire a GTM team first?",
+    question: "Can I buy Discovery on its own?",
     answer:
-      "No. That's the point. Instead of hiring 4-6 people at $500k+/year and waiting 6-12 months for them to ramp, you hire one GTM person and we augment them with AI agents and systems that deliver the same output. You get a full GTM function without the full headcount.",
+      "Yes. Discovery delivers a concrete GTM blueprint with priorities and system architecture. It is valuable standalone. You could take it and build internally, or bring Runrait on to build and run the operating system.",
   },
   {
-    question: "Does Runrait work with startups in New Zealand and Australia?",
+    question: "What happens after the GTM operating system is built?",
     answer:
-      "Yes. Runrait is based in New Zealand and works with startups across New Zealand and Australia. We embed remotely with founding teams and have deep understanding of the ANZ startup ecosystem, from seed-stage founders through to Series A growth.",
-  },
-  {
-    question: "What AI agents and systems does Runrait build?",
-    answer:
-      "Every engagement is different. Common AI agents include product marketing, SDR, content, demand gen, revenue ops, CS ops, and marketing ops. AI-powered systems cover everything from messaging and website to pipeline management, analytics, sales enablement, and more. Yours are scoped during discovery based on your product, market, and current state.",
+      "Two paths. Handover: we document everything, train your team, and hand over a system you can run independently. Ongoing: we stay embedded month to month, optimising based on real data and keeping the engine compounding. Your call.",
   },
   {
     question: "Are you locked into a specific AI platform?",
     answer:
       "No. We're platform and model agnostic. We work across all major AI models and set things up so you can move between providers as the landscape evolves. No lock-in, no proprietary wrappers. You own the system and the flexibility to switch.",
+  },
+  {
+    question: "Does Runrait work with startups in New Zealand and Australia?",
+    answer:
+      "Yes. Runrait is based in New Zealand and works with startups across New Zealand and Australia. The GTM operating system is built and run remotely, so location is not a constraint.",
   },
   {
     question: "How much does Runrait cost?",

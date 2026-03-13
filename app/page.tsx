@@ -19,7 +19,21 @@ const organizationJsonLd = {
   name: "Runrait",
   url: siteUrl,
   description:
-    "Runrait builds AI-powered go-to-market systems for seed-to-Series A startups in New Zealand and Australia.",
+    "Runrait builds AI-powered GTM operating systems for early-stage startups. AI agents and systems that give founders the output of a full go-to-market team.",
+  email: "hello@runrait.ai",
+  areaServed: [
+    { "@type": "Country", name: "New Zealand" },
+    { "@type": "Country", name: "Australia" },
+  ],
+  knowsAbout: [
+    "Go-to-market strategy",
+    "GTM operating systems",
+    "AI agents for sales and marketing",
+    "Revenue operations",
+    "Startup growth systems",
+    "Pipeline architecture",
+    "GTM engineering",
+  ],
   contactPoint: {
     "@type": "ContactPoint",
     email: "hello@runrait.ai",
@@ -30,7 +44,8 @@ const organizationJsonLd = {
 const serviceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  serviceType: "AI-Powered GTM Systems",
+  name: "GTM Operating System",
+  serviceType: "Go-to-Market Systems",
   provider: {
     "@type": "Organization",
     name: "Runrait",
@@ -40,7 +55,11 @@ const serviceJsonLd = {
     { "@type": "Country", name: "Australia" },
   ],
   description:
-    "AI agents and AI-powered systems that give your founding team the output of a full go-to-market org — without the headcount.",
+    "AI-powered go-to-market operating systems for early-stage startups. Includes AI agents for autonomous GTM execution and AI-powered systems for messaging, pipeline, analytics, and enablement.",
+  audience: {
+    "@type": "Audience",
+    audienceType: "Seed-to-Series-A startup founders",
+  },
 };
 
 const faqJsonLd = {

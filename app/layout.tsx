@@ -16,32 +16,39 @@ const jetbrainsMono = JetBrains_Mono({
 
 const siteUrl = "https://meaan790.github.io/runrait-tech";
 const description =
-  "Runrait builds AI agents and GTM systems for seed-to-Series A startups in New Zealand and Australia. Give your founding team the output of a full go-to-market org — without the headcount.";
+  "Runrait builds AI agents and GTM operating systems that give founders the output of a full go-to-market team. Without the headcount. From discovery through execution.";
+const ogDescription =
+  "The GTM team you'd hire. Built for you as an operating system. AI agents and systems that give your team the output of a full go-to-market org.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Runrait | AI-Powered GTM Systems for Startups",
+  title: "Runrait | AI-Powered GTM Operating Systems for Startups",
   description,
   keywords: [
-    "AI GTM",
-    "go to market system",
-    "AI agents",
-    "GTM for startups",
-    "revenue operations",
-    "startup GTM New Zealand",
-    "startup GTM Australia",
-    "fractional GTM",
-    "AI-powered sales",
-    "seed to Series A",
     "GTM operating system",
+    "AI GTM system",
+    "go-to-market system startups",
+    "AI agents GTM",
+    "GTM operating system for startups",
+    "revenue engine startups",
+    "GTM engineer",
+    "GTM engineer alternative",
+    "fractional GTM",
+    "startup GTM strategy New Zealand",
+    "startup GTM Australia",
+    "B2B SaaS marketing NZ",
+    "AI-powered go-to-market",
+    "go-to-market strategy early stage",
+    "seed to Series A",
+    "revenue operations",
     "Runrait",
   ],
   alternates: {
     canonical: siteUrl,
   },
   openGraph: {
-    title: "Runrait | AI-Powered GTM Systems for Startups",
-    description,
+    title: "Runrait | AI-Powered GTM Operating Systems for Startups",
+    description: ogDescription,
     url: siteUrl,
     siteName: "Runrait",
     type: "website",
