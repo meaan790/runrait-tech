@@ -23,17 +23,17 @@ function TraditionalView() {
       transition={{ duration: 0.4 }}
     >
       <motion.div
-        className="flex flex-col items-center gap-2.5 rounded-[10px] border border-accent/20 bg-accent-muted/30 px-8 py-5"
+        className="flex flex-col items-center gap-2.5 rounded-[10px] border border-border bg-surface px-8 py-5"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3 }}
       >
-        <Users className="h-5 w-5 text-accent/60" strokeWidth={1.5} />
+        <Users className="h-5 w-5 text-text-tertiary" strokeWidth={1.5} />
         <span className="text-sm font-semibold text-text-primary">Founding Team</span>
       </motion.div>
 
       <motion.div
-        className="h-6 w-px bg-accent/20"
+        className="h-6 w-px bg-border"
         initial={{ scaleY: 0 }}
         animate={{ scaleY: 1 }}
         transition={{ duration: 0.2, delay: 0.15 }}
@@ -44,13 +44,13 @@ function TraditionalView() {
         {TRADITIONAL_ROLES.map((role, i) => (
           <motion.div
             key={role}
-            className="flex flex-col items-center gap-2.5 rounded-[8px] border border-accent/15 bg-accent-muted/20 px-4 py-5"
+            className="flex flex-col items-center gap-2.5 rounded-[8px] border border-border bg-surface px-4 py-5"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.2 + i * 0.06 }}
           >
-            <User className="h-5 w-5 text-accent/50" strokeWidth={1.5} />
-            <span className="text-center text-xs font-medium text-text-primary">
+            <User className="h-5 w-5 text-text-tertiary" strokeWidth={1.5} />
+            <span className="text-center text-xs font-medium text-text-secondary">
               {role}
             </span>
           </motion.div>
@@ -58,7 +58,7 @@ function TraditionalView() {
       </div>
 
       <div className="flex flex-col items-center gap-1">
-        <span className="text-lg font-bold text-text-secondary">
+        <span className="text-lg font-bold text-text-tertiary">
           {TRADITIONAL_ROLES.length} hires &middot; {GTM_OS.traditionalCost}
         </span>
       </div>
@@ -165,15 +165,15 @@ function RunraitView() {
           {GTM_HIRE_SYSTEMS.map((system, i) => (
             <motion.div
               key={system.name}
-              className="relative flex flex-col items-center gap-1 rounded-[8px] border border-border/60 bg-surface px-2.5 py-2.5"
+              className="relative flex flex-col items-center gap-1 rounded-[8px] border border-accent/15 bg-accent-muted/20 px-2.5 py-2.5"
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.2, delay: 1.0 + i * 0.03 }}
             >
-              <span className="absolute -top-2 left-1/2 -translate-x-1/2 rounded-[3px] bg-surface px-1.5 py-px text-[7px] font-bold uppercase tracking-wider text-text-secondary">
+              <span className="absolute -top-2 left-1/2 -translate-x-1/2 rounded-[3px] bg-accent-muted px-1.5 py-px text-[7px] font-bold uppercase tracking-wider text-accent/70">
                 System
               </span>
-              <Cpu className="mt-1.5 h-3 w-3 text-text-secondary" strokeWidth={1.5} />
+              <Cpu className="mt-1.5 h-3 w-3 text-accent/50" strokeWidth={1.5} />
               <span className="text-center text-[10px] font-medium leading-tight text-text-primary">
                 {system.name}
               </span>
