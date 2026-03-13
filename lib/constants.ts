@@ -129,7 +129,7 @@ export const HOW_IT_WORKS: {
 export const GTM_OS = {
   headline: "The GTM team you\u2019d hire. Built for you as an operating system.",
   intro:
-    "One GTM hire, augmented by AI agents and systems. The output of a full go-to-market org.",
+    "Your founding team and one GTM hire, augmented by AI agents and AI-powered systems. The output of a full go-to-market org.",
   traditionalCost: "$500k+/year in salaries. 6\u201312 months before results.",
   closing:
     "Every operating system is different. Yours is scoped during discovery based on your product, your market, and where you are right now.",
@@ -155,26 +155,27 @@ export const GTM_HIRE_AGENTS = [
 ];
 
 export const GTM_HIRE_SYSTEMS = [
-  { name: "Messaging", desc: "Positioning and value props" },
-  { name: "Website", desc: "Landing pages and conversion" },
-  { name: "Pipeline Management", desc: "CRM and deal tracking" },
-  { name: "Analytics", desc: "Dashboards and reporting" },
-  { name: "Sales Enablement", desc: "Decks, one-pagers, battlecards" },
-  { name: "Lead Scoring", desc: "Intent signals and prioritisation" },
-  { name: "Email Nurture", desc: "Drip campaigns and sequences" },
-  { name: "Brand Voice", desc: "Tone, style, consistency" },
-  { name: "Design System", desc: "Templates and brand assets" },
-  { name: "Competitive Intelligence", desc: "Market and competitor tracking" },
-  { name: "Social", desc: "Distribution and engagement" },
-  { name: "SEO", desc: "Search visibility and content" },
-  { name: "Data Enrichment", desc: "Lead and account data" },
-  { name: "Attribution", desc: "Channel and campaign performance" },
-  { name: "Onboarding", desc: "Customer activation flows" },
+  { name: "Messaging AI", desc: "Positioning and value props" },
+  { name: "Website AI", desc: "Landing pages and conversion" },
+  { name: "Pipeline AI", desc: "CRM and deal tracking" },
+  { name: "Analytics AI", desc: "Dashboards and reporting" },
+  { name: "Enablement AI", desc: "Decks, one-pagers, battlecards" },
+  { name: "Lead Scoring AI", desc: "Intent signals and prioritisation" },
+  { name: "Email Nurture AI", desc: "Drip campaigns and sequences" },
+  { name: "Brand Voice AI", desc: "Tone, style, consistency" },
+  { name: "Design System AI", desc: "Templates and brand assets" },
+  { name: "Competitive Intel AI", desc: "Market and competitor tracking" },
+  { name: "Social AI", desc: "Distribution and engagement" },
+  { name: "SEO AI", desc: "Search visibility and content" },
+  { name: "AEO / GEO AI", desc: "AI and generative engine optimisation" },
+  { name: "Data Enrichment AI", desc: "Lead and account data" },
+  { name: "Attribution AI", desc: "Channel and campaign performance" },
+  { name: "Onboarding AI", desc: "Customer activation flows" },
 ];
 
 export const COMPARISON = {
   headline: "Not an agency. Not a hire. A system.",
-  headers: ["", "Agency", "GTM Hire", "Runrait"],
+  headers: ["", "Agency", "GTM Hires", "Runrait"],
   rows: [
     ["What you get", "Tactics and deliverables", "A person (eventually)", "A working GTM system"],
     ["Time to value", "Ongoing, incremental", "6\u201312 months", "Quick wins in weeks. Full system over time."],

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { User, UserPlus, Bot, Cpu } from "lucide-react";
+import { Users, UserPlus, User, Bot, Cpu } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import {
@@ -22,6 +22,25 @@ function TraditionalView() {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.4 }}
     >
+      {/* Founding Team card */}
+      <motion.div
+        className="flex flex-col items-center gap-2.5 rounded-[10px] border border-border bg-surface px-8 py-5"
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.3 }}
+      >
+        <Users className="h-5 w-5 text-text-tertiary" strokeWidth={1.5} />
+        <span className="text-sm font-semibold text-text-primary">Founding Team</span>
+      </motion.div>
+
+      <motion.div
+        className="h-6 w-px bg-border"
+        initial={{ scaleY: 0 }}
+        animate={{ scaleY: 1 }}
+        transition={{ duration: 0.2, delay: 0.15 }}
+        style={{ transformOrigin: "top" }}
+      />
+
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6">
         {TRADITIONAL_ROLES.map((role, i) => (
           <motion.div
@@ -29,7 +48,7 @@ function TraditionalView() {
             className="flex flex-col items-center gap-2.5 rounded-[8px] border border-border bg-surface px-4 py-5"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: i * 0.06 }}
+            transition={{ duration: 0.3, delay: 0.2 + i * 0.06 }}
           >
             <User className="h-5 w-5 text-text-tertiary" strokeWidth={1.5} />
             <span className="text-center text-xs font-medium text-text-secondary">
@@ -57,7 +76,7 @@ function RunraitView() {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.4 }}
     >
-      {/* Founder + GTM Hires */}
+      {/* Founding Team + GTM Hire */}
       <div className="flex flex-col items-center gap-6 sm:flex-row sm:gap-10">
         <motion.div
           className="flex flex-col items-center gap-2.5 rounded-[10px] border border-border bg-surface px-7 py-5"
@@ -66,9 +85,9 @@ function RunraitView() {
           transition={{ duration: 0.3, delay: 0.1 }}
         >
           <div className="flex h-12 w-12 items-center justify-center rounded-full border border-accent/30 bg-accent-muted">
-            <User className="h-5 w-5 text-accent" strokeWidth={1.5} />
+            <Users className="h-5 w-5 text-accent" strokeWidth={1.5} />
           </div>
-          <span className="text-sm font-semibold text-text-primary">Founder</span>
+          <span className="text-sm font-semibold text-text-primary">Founding Team</span>
           <span className="text-[10px] text-text-tertiary">Strategy &amp; oversight</span>
         </motion.div>
 
@@ -81,8 +100,8 @@ function RunraitView() {
           <div className="flex h-12 w-12 items-center justify-center rounded-full border border-accent/40 bg-accent-muted">
             <UserPlus className="h-5 w-5 text-accent" strokeWidth={1.5} />
           </div>
-          <span className="text-sm font-semibold text-text-primary">GTM Hires</span>
-          <span className="text-[10px] text-accent">2 people &middot; Augmented by AI</span>
+          <span className="text-sm font-semibold text-text-primary">GTM Hire</span>
+          <span className="text-[10px] text-accent">Augmented by AI</span>
         </motion.div>
       </div>
 
@@ -95,7 +114,7 @@ function RunraitView() {
         style={{ transformOrigin: "top" }}
       />
 
-      {/* AI Agents */}
+      {/* AI Agents — force 2 rows via max-width */}
       <div className="flex w-full flex-col items-center gap-4">
         <motion.span
           className="text-[10px] font-bold uppercase tracking-[0.15em] text-accent"
@@ -105,11 +124,11 @@ function RunraitView() {
         >
           AI Agents &middot; {GTM_HIRE_AGENTS.length}
         </motion.span>
-        <div className="flex flex-wrap justify-center gap-2.5">
+        <div className="mx-auto grid max-w-[620px] grid-cols-3 gap-2.5 sm:grid-cols-4">
           {GTM_HIRE_AGENTS.map((agent, i) => (
             <motion.div
               key={agent.name}
-              className="relative flex w-[130px] flex-col items-center gap-1.5 rounded-[8px] border border-accent/50 bg-[#0F1F1D] px-3 py-3"
+              className="relative flex flex-col items-center gap-1.5 rounded-[8px] border border-accent/50 bg-[#0F1F1D] px-3 py-3"
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.25, delay: 0.4 + i * 0.06 }}
@@ -180,7 +199,6 @@ function RunraitView() {
         transition={{ duration: 0.4, delay: 1.5 }}
       >
         {[
-          { val: "2", label: "People" },
           { val: String(GTM_HIRE_AGENTS.length), label: "AI Agents" },
           { val: String(GTM_HIRE_SYSTEMS.length), label: "AI Systems" },
         ].map((stat, i) => (
@@ -217,24 +235,39 @@ export function WhatGetsBuilt() {
           </p>
         </div>
 
-        {/* Toggle */}
-        <div className="flex">
+        {/* Segmented toggle */}
+        <div className="relative flex rounded-full bg-surface/60 p-1 backdrop-blur-sm">
+          {/* Animated background pill */}
+          <motion.div
+            className="absolute inset-y-1 rounded-full"
+            animate={{
+              left: view === "traditional" ? "4px" : "50%",
+              right: view === "traditional" ? "50%" : "4px",
+            }}
+            transition={{ type: "spring", stiffness: 400, damping: 30 }}
+            style={{
+              background:
+                view === "runrait"
+                  ? "linear-gradient(135deg, #0A2E2A, #143D37)"
+                  : "rgba(255,255,255,0.06)",
+            }}
+          />
           <button
             onClick={() => setView("traditional")}
-            className={`rounded-l-[6px] border px-5 py-2.5 text-xs font-semibold transition-all ${
+            className={`relative z-10 rounded-full px-6 py-2.5 text-xs font-semibold transition-colors ${
               view === "traditional"
-                ? "border-border bg-surface text-text-primary"
-                : "border-border/50 bg-transparent text-text-tertiary hover:text-text-secondary"
+                ? "text-text-primary"
+                : "text-text-tertiary hover:text-text-secondary"
             }`}
           >
             Traditional GTM Team
           </button>
           <button
             onClick={() => setView("runrait")}
-            className={`rounded-r-[6px] border border-l-0 px-5 py-2.5 text-xs font-semibold transition-all ${
+            className={`relative z-10 rounded-full px-6 py-2.5 text-xs font-semibold transition-colors ${
               view === "runrait"
-                ? "border-accent bg-accent/10 text-accent"
-                : "border-border/50 bg-transparent text-text-tertiary hover:text-text-secondary"
+                ? "text-accent"
+                : "text-text-tertiary hover:text-text-secondary"
             }`}
           >
             With Runrait

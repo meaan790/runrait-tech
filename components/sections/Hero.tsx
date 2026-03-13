@@ -47,7 +47,7 @@ export function Hero() {
           <span className="text-[10px] font-semibold uppercase tracking-widest text-text-tertiary">
             Traditional GTM team
           </span>
-          <span className="text-2xl font-bold text-text-tertiary">6–8 hires</span>
+          <span className="text-xl font-bold text-text-tertiary">Founding Team + 4–6 GTM Hires</span>
           <span className="text-sm text-text-tertiary">$500k+/year</span>
           <span className="text-xs text-text-tertiary">6–12 months to ramp</span>
         </div>
@@ -60,7 +60,7 @@ export function Hero() {
           <span className="text-[10px] font-semibold uppercase tracking-widest text-accent">
             With Runrait
           </span>
-          <span className="text-2xl font-bold text-text-primary">2 people</span>
+          <span className="text-xl font-bold text-text-primary">Founding Team + 1 GTM Hire</span>
           <span className="text-sm text-accent">Full GTM output</span>
           <span className="text-xs text-text-secondary">Results in weeks</span>
         </div>
