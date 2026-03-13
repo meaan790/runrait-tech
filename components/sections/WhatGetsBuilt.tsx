@@ -205,7 +205,7 @@ export function WhatGetsBuilt() {
   const [view, setView] = useState<View>("traditional");
 
   return (
-    <SectionWrapper id="what-gets-built" bg="alt">
+    <SectionWrapper id="what-gets-built" bg="dark">
       <div className="flex flex-col items-center gap-10 py-24 md:py-[100px]">
         {/* Header */}
         <div className="flex flex-col items-center gap-3 text-center">

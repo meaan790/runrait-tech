@@ -6,7 +6,7 @@ import { HOW_IT_WORKS } from "@/lib/constants";
 
 export function HowItWorks() {
   return (
-    <SectionWrapper id="how-it-works" bg="dark">
+    <SectionWrapper id="how-it-works" bg="alt">
       <div className="flex flex-col items-center gap-10 py-20 md:py-[80px]">
         <h2 className="text-center text-3xl font-bold leading-[1.2] text-text-primary md:text-[40px]">
           {HOW_IT_WORKS.headline}

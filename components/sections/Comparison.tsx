@@ -6,7 +6,7 @@ import { COMPARISON } from "@/lib/constants";
 
 export function Comparison() {
   return (
-    <SectionWrapper bg="dark">
+    <SectionWrapper bg="alt">
       <div className="flex flex-col items-center gap-12 py-24 md:py-[100px]">
         <h2 className="text-center text-3xl font-bold leading-[1.2] text-text-primary md:text-[40px]">
           {COMPARISON.headline}
