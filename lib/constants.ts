@@ -20,7 +20,7 @@ export const NAV_LINKS = [
 export const HERO = {
   headline: "Scale your revenue without scaling your team.",
   subheadline:
-    "Runrait builds AI-powered GTM systems that give your team the output of a full go-to-market org.",
+    "Runrait builds AI-powered GTM systems that give your team the output of a full go-to-market org — without the headcount.",
   cta: "Book a Discovery Call",
   ctaHref: "https://calendar.app.google/PmoSPF4DyqnD6akk6",
 };
@@ -129,10 +129,11 @@ export const HOW_IT_WORKS: {
 export const GTM_OS = {
   headline: "The GTM team you\u2019d hire. Built for you as an operating system.",
   intro:
-    "Your founding team and one GTM hire, augmented by AI agents and AI-powered systems. The output of a full go-to-market org.",
+    "Your founding team and one GTM hire, augmented by AI agents and AI-powered systems.",
+  introLine2: "The output of a full go-to-market org.",
   traditionalCost: "$500k+/year in salaries. 6\u201312 months before results.",
   closing:
-    "Every operating system is different. Yours is scoped during discovery based on your product, your market, and where you are right now.",
+    "Every system is different. Yours is scoped during discovery based on your product, market, and current state.",
 };
 
 export const TRADITIONAL_ROLES = [
@@ -177,12 +178,12 @@ export const COMPARISON = {
   headline: "Not an agency. Not a hire. A system.",
   headers: ["", "Agency", "GTM Hires", "Runrait"],
   rows: [
-    ["What you get", "Tactics and deliverables", "A person (eventually)", "A working GTM system"],
+    ["What you get", "Tactics and deliverables", "4–6 hires", "A working GTM system"],
     ["Time to value", "Ongoing, incremental", "6\u201312 months", "Quick wins in weeks. Full system over time."],
     ["Strategy included", "Rarely", "Depends on the hire", "Always. Discovery first."],
     ["Execution included", "Partial (their channel)", "Depends on bandwidth", "End-to-end"],
     ["System thinking", "Siloed", "Varies", "Core to the approach"],
-    ["Cost", "$5\u201315k/mo retainer", "$180\u2013250k+ salary", "Project-based, outcome-aligned"],
+    ["Cost", "$5\u201315k/mo retainer", "$500k+/year in salaries", "Project-based, outcome-aligned"],
   ],
 };
 

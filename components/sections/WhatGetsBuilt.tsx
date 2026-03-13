@@ -22,7 +22,6 @@ function TraditionalView() {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.4 }}
     >
-      {/* Founding Team card */}
       <motion.div
         className="flex flex-col items-center gap-2.5 rounded-[10px] border border-border bg-surface px-8 py-5"
         initial={{ opacity: 0, scale: 0.95 }}
@@ -68,6 +67,9 @@ function TraditionalView() {
 }
 
 function RunraitView() {
+  const topRow = GTM_HIRE_AGENTS.slice(0, 4);
+  const bottomRow = GTM_HIRE_AGENTS.slice(4);
+
   return (
     <motion.div
       className="flex w-full flex-col items-center"
@@ -114,7 +116,7 @@ function RunraitView() {
         style={{ transformOrigin: "top" }}
       />
 
-      {/* AI Agents — force 2 rows via max-width */}
+      {/* AI Agents — 4 top, 3 bottom centered */}
       <div className="flex w-full flex-col items-center gap-4">
         <motion.span
           className="text-[10px] font-bold uppercase tracking-[0.15em] text-accent"
@@ -124,26 +126,18 @@ function RunraitView() {
         >
           AI Agents &middot; {GTM_HIRE_AGENTS.length}
         </motion.span>
-        <div className="mx-auto grid max-w-[620px] grid-cols-3 gap-2.5 sm:grid-cols-4">
-          {GTM_HIRE_AGENTS.map((agent, i) => (
-            <motion.div
-              key={agent.name}
-              className="relative flex flex-col items-center gap-1.5 rounded-[8px] border border-accent/50 bg-[#0F1F1D] px-3 py-3"
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.25, delay: 0.4 + i * 0.06 }}
-            >
-              <span className="absolute -top-2 left-1/2 -translate-x-1/2 rounded-[3px] bg-accent px-1.5 py-px text-[7px] font-bold uppercase tracking-wider text-bg">
-                Agent
-              </span>
-              <Bot className="mt-1.5 h-3.5 w-3.5 text-accent" strokeWidth={1.5} />
-              <span className="text-center text-[10px] font-medium leading-tight text-text-primary">
-                {agent.name}
-              </span>
-              <span className="text-center text-[8px] leading-tight text-text-tertiary">
-                {agent.desc}
-              </span>
-            </motion.div>
+
+        {/* Top row: 4 agents */}
+        <div className="flex justify-center gap-2.5">
+          {topRow.map((agent, i) => (
+            <AgentCard key={agent.name} agent={agent} delay={0.4 + i * 0.06} />
+          ))}
+        </div>
+
+        {/* Bottom row: 3 agents centered */}
+        <div className="flex justify-center gap-2.5">
+          {bottomRow.map((agent, i) => (
+            <AgentCard key={agent.name} agent={agent} delay={0.64 + i * 0.06} />
           ))}
         </div>
       </div>
@@ -160,26 +154,26 @@ function RunraitView() {
       {/* AI Systems */}
       <div className="flex w-full flex-col items-center gap-4">
         <motion.span
-          className="text-[10px] font-bold uppercase tracking-[0.15em] text-text-tertiary"
+          className="text-[10px] font-bold uppercase tracking-[0.15em] text-text-secondary"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3, delay: 0.95 }}
         >
           AI-Powered Systems &middot; {GTM_HIRE_SYSTEMS.length}
         </motion.span>
-        <div className="flex flex-wrap justify-center gap-2">
+        <div className="mx-auto grid max-w-[960px] grid-cols-4 gap-2 sm:grid-cols-8">
           {GTM_HIRE_SYSTEMS.map((system, i) => (
             <motion.div
               key={system.name}
-              className="relative flex w-[110px] flex-col items-center gap-1 rounded-[8px] border border-dashed border-border bg-surface px-2.5 py-2.5"
+              className="relative flex flex-col items-center gap-1 rounded-[8px] border border-border/60 bg-surface px-2.5 py-2.5"
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.2, delay: 1.0 + i * 0.03 }}
             >
-              <span className="absolute -top-2 left-1/2 -translate-x-1/2 rounded-[3px] bg-[#252530] px-1.5 py-px text-[7px] font-bold uppercase tracking-wider text-text-tertiary">
+              <span className="absolute -top-2 left-1/2 -translate-x-1/2 rounded-[3px] bg-surface px-1.5 py-px text-[7px] font-bold uppercase tracking-wider text-text-secondary">
                 System
               </span>
-              <Cpu className="mt-1.5 h-3 w-3 text-text-tertiary" strokeWidth={1.5} />
+              <Cpu className="mt-1.5 h-3 w-3 text-text-secondary" strokeWidth={1.5} />
               <span className="text-center text-[10px] font-medium leading-tight text-text-primary">
                 {system.name}
               </span>
@@ -199,6 +193,7 @@ function RunraitView() {
         transition={{ duration: 0.4, delay: 1.5 }}
       >
         {[
+          { val: "1", label: "GTM Hire" },
           { val: String(GTM_HIRE_AGENTS.length), label: "AI Agents" },
           { val: String(GTM_HIRE_SYSTEMS.length), label: "AI Systems" },
         ].map((stat, i) => (
@@ -219,6 +214,28 @@ function RunraitView() {
   );
 }
 
+function AgentCard({ agent, delay }: { agent: { name: string; desc: string }; delay: number }) {
+  return (
+    <motion.div
+      className="relative flex w-[140px] flex-col items-center gap-1.5 rounded-[8px] border border-accent/50 bg-[#0F1F1D] px-3 py-3"
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.25, delay }}
+    >
+      <span className="absolute -top-2 left-1/2 -translate-x-1/2 rounded-[3px] bg-accent px-1.5 py-px text-[7px] font-bold uppercase tracking-wider text-bg">
+        Agent
+      </span>
+      <Bot className="mt-1.5 h-3.5 w-3.5 text-accent" strokeWidth={1.5} />
+      <span className="text-center text-[10px] font-medium leading-tight text-text-primary">
+        {agent.name}
+      </span>
+      <span className="text-center text-[8px] leading-tight text-text-tertiary">
+        {agent.desc}
+      </span>
+    </motion.div>
+  );
+}
+
 export function WhatGetsBuilt() {
   const [view, setView] = useState<View>("traditional");
 
@@ -233,30 +250,18 @@ export function WhatGetsBuilt() {
           <p className="max-w-[820px] text-base leading-relaxed text-text-secondary">
             {GTM_OS.intro}
           </p>
+          <p className="max-w-[820px] text-base font-semibold text-text-primary">
+            {GTM_OS.introLine2}
+          </p>
         </div>
 
         {/* Segmented toggle */}
-        <div className="relative flex rounded-full bg-surface/60 p-1 backdrop-blur-sm">
-          {/* Animated background pill */}
-          <motion.div
-            className="absolute inset-y-1 rounded-full"
-            animate={{
-              left: view === "traditional" ? "4px" : "50%",
-              right: view === "traditional" ? "50%" : "4px",
-            }}
-            transition={{ type: "spring", stiffness: 400, damping: 30 }}
-            style={{
-              background:
-                view === "runrait"
-                  ? "linear-gradient(135deg, #0A2E2A, #143D37)"
-                  : "rgba(255,255,255,0.06)",
-            }}
-          />
+        <div className="inline-flex rounded-full border border-border bg-surface p-1">
           <button
             onClick={() => setView("traditional")}
-            className={`relative z-10 rounded-full px-6 py-2.5 text-xs font-semibold transition-colors ${
+            className={`relative rounded-full px-6 py-2.5 text-xs font-semibold transition-all duration-200 ${
               view === "traditional"
-                ? "text-text-primary"
+                ? "bg-white/10 text-text-primary shadow-sm"
                 : "text-text-tertiary hover:text-text-secondary"
             }`}
           >
@@ -264,9 +269,9 @@ export function WhatGetsBuilt() {
           </button>
           <button
             onClick={() => setView("runrait")}
-            className={`relative z-10 rounded-full px-6 py-2.5 text-xs font-semibold transition-colors ${
+            className={`relative rounded-full px-6 py-2.5 text-xs font-semibold transition-all duration-200 ${
               view === "runrait"
-                ? "text-accent"
+                ? "bg-accent/15 text-accent shadow-sm"
                 : "text-text-tertiary hover:text-text-secondary"
             }`}
           >
@@ -286,7 +291,7 @@ export function WhatGetsBuilt() {
         </div>
 
         {/* Closing */}
-        <p className="max-w-[820px] text-center text-sm italic text-text-tertiary">
+        <p className="max-w-[960px] text-center text-sm italic text-text-tertiary">
           {GTM_OS.closing}
         </p>
       </div>
