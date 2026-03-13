@@ -245,7 +245,9 @@ export function WhatGetsBuilt() {
         {/* Header */}
         <div className="flex flex-col items-center gap-3 text-center">
           <h2 className="max-w-[800px] text-3xl font-bold leading-[1.2] text-text-primary md:text-[40px]">
-            {GTM_OS.headline}
+            {GTM_OS.headlineLine1}
+            <br />
+            {GTM_OS.headlineLine2}
           </h2>
           <p className="max-w-[820px] text-base leading-relaxed text-text-secondary">
             {GTM_OS.intro}

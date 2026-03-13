@@ -20,7 +20,7 @@ export const NAV_LINKS = [
 export const HERO = {
   headline: "Scale your revenue without scaling your team.",
   subheadline:
-    "Runrait builds AI-powered GTM systems that give your team the output of a full go-to-market org — without the headcount.",
+    "Runrait builds AI-powered GTM systems that give your team the output of a full go-to-market org, without the headcount.",
   cta: "Book a Discovery Call",
   ctaHref: "https://calendar.app.google/PmoSPF4DyqnD6akk6",
 };
@@ -33,7 +33,7 @@ export interface OptionCard {
 
 export const PROBLEM = {
   headlineLine1: "You have product-market fit.",
-  headlineLine2: "You don\u2019t have a revenue engine yet.",
+  headlineLine2: "You don\u2019t have a revenue engine\u2026 yet.",
   body: "Customers are paying. But revenue growth is manual, founder-dependent, and not scaling.",
   cards: [
     {
@@ -55,7 +55,7 @@ export const PROBLEM = {
         "Revenue grows when you push. It stalls when you stop. There\u2019s no system running without you.",
     },
   ] as OptionCard[],
-  transition: "You don\u2019t need more tactics. You need a revenue engine.",
+  transition: "You don\u2019t need more tactics. You need a repeatable system to power revenue.",
 };
 
 export const TYPICAL_OPTIONS = {
@@ -86,7 +86,7 @@ export const TYPICAL_OPTIONS = {
         "You\u2019re already stretched across product, fundraising, and customer success. GTM gets whatever time is left, and it shows.",
     },
   ] as OptionCard[],
-  transition: "There is a better option.",
+  transition: "There is a 5th option.",
 };
 
 export interface PhaseCard {
@@ -127,7 +127,8 @@ export const HOW_IT_WORKS: {
 };
 
 export const GTM_OS = {
-  headline: "The GTM team you\u2019d hire. Built for you as an operating system.",
+  headlineLine1: "The GTM team you\u2019d hire.",
+  headlineLine2: "Built as your operating system.",
   intro:
     "Your founding team and one GTM hire, augmented by AI agents and AI-powered systems.",
   introLine2: "The output of a full go-to-market org.",
@@ -175,7 +176,7 @@ export const GTM_HIRE_SYSTEMS = [
 ];
 
 export const COMPARISON = {
-  headline: "Not an agency. Not a hire. A system.",
+  headline: "Not an agency. Not a hire. A GTM system.",
   headers: ["", "Agency", "GTM Hires", "Runrait"],
   rows: [
     ["What you get", "Tactics and deliverables", "4–6 hires", "A working GTM system"],
