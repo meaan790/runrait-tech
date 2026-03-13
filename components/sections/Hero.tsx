@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { HERO } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
-import { HeroVisual } from "@/components/ui/HeroVisual";
 
 export function Hero() {
   return (
@@ -37,14 +36,33 @@ export function Hero() {
         </motion.div>
       </div>
 
+      {/* Stat contrast — intrigue, not the full answer */}
       <motion.div
-        className="mt-16 w-full md:mt-20"
+        className="mt-16 flex w-full max-w-[800px] flex-col items-stretch gap-4 sm:flex-row sm:gap-5"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}
       >
-        <div className="mx-auto flex justify-center">
-          <HeroVisual />
+        <div className="flex flex-1 flex-col items-center gap-3 rounded-[10px] border border-border bg-surface p-6 opacity-55">
+          <span className="text-[10px] font-semibold uppercase tracking-widest text-text-tertiary">
+            Traditional GTM team
+          </span>
+          <span className="text-2xl font-bold text-text-tertiary">6–8 hires</span>
+          <span className="text-sm text-text-tertiary">$500k+/year</span>
+          <span className="text-xs text-text-tertiary">6–12 months to ramp</span>
+        </div>
+
+        <div className="hidden items-center justify-center sm:flex">
+          <span className="text-sm font-semibold tracking-wide text-text-tertiary">vs</span>
+        </div>
+
+        <div className="flex flex-1 flex-col items-center gap-3 rounded-[10px] border border-accent bg-gradient-to-b from-[#0A2E2A] to-[#111111] p-6">
+          <span className="text-[10px] font-semibold uppercase tracking-widest text-accent">
+            With Runrait
+          </span>
+          <span className="text-2xl font-bold text-text-primary">2 people</span>
+          <span className="text-sm text-accent">Full GTM output</span>
+          <span className="text-xs text-text-secondary">Results in weeks</span>
         </div>
       </motion.div>
     </section>

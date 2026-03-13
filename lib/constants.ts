@@ -3,10 +3,7 @@ import {
   Building2,
   Hourglass,
   Package,
-  Search,
   TrendingUp,
-  Layers,
-  Zap,
   ShieldCheck,
   User,
   CircleX,
@@ -37,7 +34,7 @@ export interface OptionCard {
 export const PROBLEM = {
   headlineLine1: "You have product-market fit.",
   headlineLine2: "You don\u2019t have a revenue engine yet.",
-  body: "Customers are paying. But revenue growth is manual, founder-dependent, and not scaling.\n\nYou\u2019re doing sales from your inbox. Marketing is a landing page and some LinkedIn posts. The CRM is half set up. Nothing connects to anything.\n\nThe board is asking about pipeline. The next raise depends on showing repeatable revenue. And GTM keeps getting the leftover hours.",
+  body: "Customers are paying. But revenue growth is manual, founder-dependent, and not scaling.",
   cards: [
     {
       icon: User,
@@ -92,13 +89,6 @@ export const TYPICAL_OPTIONS = {
   transition: "There is a better option.",
 };
 
-export const WHAT_RUNRAIT_DOES = {
-  headline: "Your GTM system.\nDesigned, built, and ready to run.",
-  body: "Runrait embeds with your team and builds an AI-powered go-to-market system \u2014 positioning, content, outbound, pipeline, operations. We start with discovery, then ship iteratively so you see results in weeks, not quarters.",
-  body2:
-    "You stay lean. Your capital goes further.\nAnd your revenue engine scales without your team needing to.",
-};
-
 export interface PhaseCard {
   number: string;
   title: string;
@@ -113,7 +103,7 @@ export const HOW_IT_WORKS: {
 } = {
   headline: "Discover. Build. Run.",
   intro:
-    "Every startup is at a different stage. We scope the engagement to where you actually are, not a fixed checklist.",
+    "Runrait embeds with your team and builds an AI-powered GTM system. Here\u2019s how we do it.",
   phases: [
     {
       number: "01",
@@ -195,45 +185,6 @@ export const COMPARISON = {
   ],
 };
 
-export interface WhyBlock {
-  icon: LucideIcon;
-  title: string;
-  description: string;
-}
-
-export const WHY_IT_WORKS: {
-  headline: string;
-  blocks: WhyBlock[];
-} = {
-  headline: "Four reasons this model works.",
-  blocks: [
-    {
-      icon: Search,
-      title: "Discovery first.",
-      description:
-        "We don\u2019t build until we understand your product, market, and the right motion. This prevents the most common mistake in early-stage GTM: building the wrong system for the wrong audience.",
-    },
-    {
-      icon: Layers,
-      title: "Full stack, one engagement.",
-      description:
-        "Strategy, systems, agents, execution. No handoffs between five different vendors. Everything connects because it was built as one system.",
-    },
-    {
-      icon: Zap,
-      title: "AI amplifies your team.",
-      description:
-        "The agents and systems we build give your startup the GTM output of a much larger team. You stay lean. The system scales.",
-    },
-    {
-      icon: ShieldCheck,
-      title: "You own everything.",
-      description:
-        "No proprietary platforms. No lock-in. When we\u2019re done, the system is yours. We document everything so your team can operate and evolve it independently.",
-    },
-  ],
-};
-
 export interface FitItem {
   icon: LucideIcon;
   text: string;
@@ -250,6 +201,7 @@ export const WHO_ITS_FOR = {
     { icon: CircleX, text: "You\u2019ve tried an agency or marketing hire and it didn\u2019t move the needle." },
     { icon: Compass, text: "You know you need a GTM system but don\u2019t have the time or expertise to build it properly." },
     { icon: CircleCheckBig, text: "You want to scale revenue without scaling headcount." },
+    { icon: ShieldCheck, text: "You want to own the system \u2014 no lock-in, no proprietary platforms." },
   ] as FitItem[],
 };
 
