@@ -44,16 +44,16 @@ export function Hero() {
         transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}
       >
         {/* Traditional */}
-        <div className="flex flex-1 flex-col items-center gap-4 rounded-[10px] border border-border bg-surface p-6 opacity-55">
+        <div className="flex flex-1 flex-col items-center gap-4 rounded-[10px] border border-border bg-surface p-6 opacity-70">
           <span className="text-[10px] font-semibold uppercase tracking-widest text-text-tertiary">
             Traditional GTM team
           </span>
           <div className="flex flex-col items-center gap-1">
-            <span className="text-sm text-text-tertiary">Founding Team</span>
-            <span className="text-2xl font-bold text-text-tertiary">+ 4-6 Hires</span>
+            <span className="text-sm text-text-secondary">Founding Team</span>
+            <span className="text-2xl font-bold text-text-secondary">+ 4-6 Hires</span>
           </div>
           <div className="flex flex-col items-center gap-0.5">
-            <span className="text-sm text-text-tertiary">$500k+/year</span>
+            <span className="text-sm text-text-secondary">$500k+/year</span>
             <span className="text-xs text-text-tertiary">6-12 months to ramp</span>
           </div>
         </div>
