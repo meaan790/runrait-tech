@@ -8,7 +8,7 @@ const CALENDAR_URL = "https://calendar.app.google/PmoSPF4DyqnD6akk6";
 
 export function CTA() {
   return (
-    <SectionWrapper id="cta" bg="alt">
+    <SectionWrapper id="cta" bg="dark">
       <div className="flex flex-col items-center gap-8 py-20 md:py-[80px]">
         <h2 className="text-center text-3xl font-bold leading-[1.2] text-text-primary md:text-[40px]">
           {CTA_SECTION.headline}

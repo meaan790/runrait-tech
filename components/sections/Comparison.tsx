@@ -5,6 +5,8 @@ import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { COMPARISON } from "@/lib/constants";
 
 export function Comparison() {
+  const [, ...valueHeaders] = COMPARISON.headers;
+
   return (
     <SectionWrapper bg="alt">
       <div className="flex flex-col items-center gap-12 py-24 md:py-[100px]">
@@ -12,15 +14,15 @@ export function Comparison() {
           {COMPARISON.headline}
         </h2>
 
+        {/* Desktop table (sm+) */}
         <motion.div
-          className="w-full max-w-[1200px] overflow-x-auto rounded-[var(--radius)] border border-border bg-surface"
+          className="hidden w-full max-w-[1200px] overflow-x-auto rounded-[var(--radius)] border border-border bg-surface sm:block"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          {/* Header */}
-          <div className="grid min-w-[600px] grid-cols-4 bg-border px-6 py-4">
+          <div className="grid grid-cols-4 bg-border px-6 py-4">
             {COMPARISON.headers.map((header, i) => (
               <div
                 key={i}
@@ -35,11 +37,10 @@ export function Comparison() {
             ))}
           </div>
 
-          {/* Rows */}
           {COMPARISON.rows.map((row, rowIdx) => (
             <div
               key={rowIdx}
-              className="grid min-w-[600px] grid-cols-4 border-t border-border px-6 py-4 transition-colors hover:bg-bg/30"
+              className="grid grid-cols-4 border-t border-border px-6 py-4 transition-colors hover:bg-bg/30"
             >
               {row.map((cell, cellIdx) => (
                 <div
@@ -59,6 +60,48 @@ export function Comparison() {
                   {cell}
                 </div>
               ))}
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Mobile stacked cards (below sm) */}
+        <motion.div
+          className="flex w-full flex-col gap-4 sm:hidden"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          {COMPARISON.rows.map((row, rowIdx) => (
+            <div
+              key={rowIdx}
+              className="rounded-[var(--radius)] border border-border bg-surface p-4"
+            >
+              <p className="mb-3 text-sm font-semibold text-text-primary">
+                {row[0]}
+              </p>
+              <div className="flex flex-col gap-2">
+                {valueHeaders.map((header, i) => (
+                  <div key={i} className="flex items-start justify-between gap-3">
+                    <span
+                      className={`shrink-0 text-xs font-medium ${
+                        i === 2 ? "text-accent" : "text-text-tertiary"
+                      }`}
+                    >
+                      {header}
+                    </span>
+                    <span
+                      className={`text-right text-xs ${
+                        i === 2
+                          ? "font-medium text-text-primary"
+                          : "text-text-secondary"
+                      }`}
+                    >
+                      {row[i + 1]}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </motion.div>

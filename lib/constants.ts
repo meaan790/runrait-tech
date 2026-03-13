@@ -207,6 +207,54 @@ export const WHO_ITS_FOR = {
   ] as FitItem[],
 };
 
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export const FAQ_ITEMS: FAQItem[] = [
+  {
+    question: "What is Runrait?",
+    answer:
+      "Runrait builds AI-powered go-to-market systems for startups. We embed with your founding team, build AI agents that run your GTM autonomously, and set up the AI-powered systems your team uses daily. The result is the output of a full go-to-market org without the headcount.",
+  },
+  {
+    question: "How is Runrait different from a marketing agency?",
+    answer:
+      "Agencies run channels and produce deliverables. Runrait builds systems. We create AI agents and infrastructure that your team owns and operates long after the engagement ends. There\u2019s no retainer treadmill \u2014 you get a working GTM operating system, not a monthly report.",
+  },
+  {
+    question: "What kind of startups does Runrait work with?",
+    answer:
+      "We work best with seed-to-Series A startups in New Zealand and Australia that have proven product-market fit but haven\u2019t built a scalable revenue engine yet. If you\u2019re a founder still doing sales yourself and you know it\u2019s not scaling, you\u2019re exactly who we built this for.",
+  },
+  {
+    question: "How long does it take to see results?",
+    answer:
+      "You\u2019ll see outcomes in your first sprint. We ship in sprints, not full projects, so value compounds while we\u2019re still building. Most founders see meaningful pipeline impact within the first few weeks.",
+  },
+  {
+    question: "Do I need to hire a GTM team first?",
+    answer:
+      "No. That\u2019s the point. Instead of hiring 4\u20136 people at $500k+/year and waiting 6\u201312 months for them to ramp, you hire one GTM person and we augment them with AI agents and systems that deliver the same output. You get a full GTM function without the full headcount.",
+  },
+  {
+    question: "Does Runrait work with startups in New Zealand and Australia?",
+    answer:
+      "Yes. Runrait is based in New Zealand and works with startups across New Zealand and Australia. We embed remotely with founding teams and have deep understanding of the ANZ startup ecosystem, from seed-stage founders through to Series A growth.",
+  },
+  {
+    question: "What AI agents and systems does Runrait build?",
+    answer:
+      "Every engagement is different. Common AI agents include product marketing, SDR, content, demand gen, revenue ops, CS ops, and marketing ops. AI-powered systems cover everything from messaging and website to pipeline management, analytics, sales enablement, and more. Yours are scoped during discovery based on your product, market, and current state.",
+  },
+  {
+    question: "How much does Runrait cost?",
+    answer:
+      "Runrait is project-based and outcome-aligned \u2014 not a monthly retainer. Every engagement starts with a Discovery phase where we scope exactly what needs to be built. Pricing depends on complexity, but it\u2019s a fraction of the cost of hiring a full GTM team.",
+  },
+];
+
 export const CTA_SECTION = {
   headline: "Start with Discovery.",
   body: "Every engagement begins with a conversation. Tell us where you\u2019re at and where the gaps are. If there\u2019s a fit, we\u2019ll map the path forward together.",

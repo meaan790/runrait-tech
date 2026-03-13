@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://meaan790.github.io/runrait-tech/sitemap.xml

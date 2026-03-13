@@ -14,17 +14,38 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const siteUrl = "https://meaan790.github.io/runrait-tech";
+const description =
+  "Runrait builds AI agents and GTM systems for seed-to-Series A startups in New Zealand and Australia. Give your founding team the output of a full go-to-market org — without the headcount.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Runrait | AI-Powered GTM Systems for Startups",
-  description:
-    "Runrait builds AI agents and GTM systems that give your team the output of a full go-to-market org. From discovery through execution.",
+  description,
+  keywords: [
+    "AI GTM",
+    "go to market system",
+    "AI agents",
+    "GTM for startups",
+    "revenue operations",
+    "startup GTM New Zealand",
+    "startup GTM Australia",
+    "fractional GTM",
+    "AI-powered sales",
+    "seed to Series A",
+    "GTM operating system",
+    "Runrait",
+  ],
+  alternates: {
+    canonical: siteUrl,
+  },
   openGraph: {
     title: "Runrait | AI-Powered GTM Systems for Startups",
-    description:
-      "Runrait builds AI agents and GTM systems that give your team the output of a full go-to-market org. From discovery through execution.",
-    url: "https://runrait.ai",
+    description,
+    url: siteUrl,
     siteName: "Runrait",
     type: "website",
+    locale: "en_NZ",
   },
 };
 

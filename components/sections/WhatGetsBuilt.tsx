@@ -128,14 +128,14 @@ function RunraitView() {
         </motion.span>
 
         {/* Top row: 4 agents */}
-        <div className="flex justify-center gap-2.5">
+        <div className="grid w-full max-w-[620px] grid-cols-2 gap-2.5 sm:grid-cols-4">
           {topRow.map((agent, i) => (
             <AgentCard key={agent.name} agent={agent} delay={0.4 + i * 0.06} />
           ))}
         </div>
 
         {/* Bottom row: 3 agents centered */}
-        <div className="flex justify-center gap-2.5">
+        <div className="grid w-full max-w-[620px] grid-cols-2 gap-2.5 sm:grid-cols-3">
           {bottomRow.map((agent, i) => (
             <AgentCard key={agent.name} agent={agent} delay={0.64 + i * 0.06} />
           ))}
@@ -161,7 +161,7 @@ function RunraitView() {
         >
           AI-Powered Systems &middot; {GTM_HIRE_SYSTEMS.length}
         </motion.span>
-        <div className="mx-auto grid max-w-[960px] grid-cols-4 gap-2 sm:grid-cols-8">
+        <div className="mx-auto grid w-full max-w-[960px] grid-cols-2 gap-2 sm:grid-cols-4 md:grid-cols-8">
           {GTM_HIRE_SYSTEMS.map((system, i) => (
             <motion.div
               key={system.name}
@@ -217,7 +217,7 @@ function RunraitView() {
 function AgentCard({ agent, delay }: { agent: { name: string; desc: string }; delay: number }) {
   return (
     <motion.div
-      className="relative flex w-[140px] flex-col items-center gap-1.5 rounded-[8px] border border-accent/50 bg-[#0F1F1D] px-3 py-3"
+      className="relative flex flex-col items-center gap-1.5 rounded-[8px] border border-accent/50 bg-[#0F1F1D] px-3 py-3"
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.25, delay }}
@@ -256,8 +256,10 @@ export function WhatGetsBuilt() {
         </div>
 
         {/* Segmented toggle */}
-        <div className="inline-flex rounded-full border border-border bg-surface p-1">
+        <div className="inline-flex rounded-full border border-border bg-surface p-1" role="tablist" aria-label="Compare GTM approaches">
           <button
+            role="tab"
+            aria-selected={view === "traditional"}
             onClick={() => setView("traditional")}
             className={`relative rounded-full px-6 py-2.5 text-xs font-semibold transition-all duration-200 ${
               view === "traditional"
@@ -268,6 +270,8 @@ export function WhatGetsBuilt() {
             Traditional GTM Team
           </button>
           <button
+            role="tab"
+            aria-selected={view === "runrait"}
             onClick={() => setView("runrait")}
             className={`relative rounded-full px-6 py-2.5 text-xs font-semibold transition-all duration-200 ${
               view === "runrait"
