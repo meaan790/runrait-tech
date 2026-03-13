@@ -221,22 +221,22 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "How is Runrait different from a marketing agency?",
     answer:
-      "Agencies run channels and produce deliverables. Runrait builds systems. We create AI agents and infrastructure that your team owns and operates long after the engagement ends. There\u2019s no retainer treadmill \u2014 you get a working GTM operating system, not a monthly report.",
+      "Agencies run channels and produce deliverables on a monthly retainer. Runrait builds the underlying system. We create AI agents and connected infrastructure that your team owns and operates long after the engagement ends. You get a working GTM operating system, not a deck and a monthly report.",
   },
   {
     question: "What kind of startups does Runrait work with?",
     answer:
-      "We work best with seed-to-Series A startups in New Zealand and Australia that have proven product-market fit but haven\u2019t built a scalable revenue engine yet. If you\u2019re a founder still doing sales yourself and you know it\u2019s not scaling, you\u2019re exactly who we built this for.",
+      "We work best with seed-to-Series A startups in New Zealand and Australia that have proven product-market fit but haven't built a scalable revenue engine yet. If you're a founder still doing sales yourself and you know it's not scaling, you're exactly who we built this for.",
   },
   {
     question: "How long does it take to see results?",
     answer:
-      "You\u2019ll see outcomes in your first sprint. We ship in sprints, not full projects, so value compounds while we\u2019re still building. Most founders see meaningful pipeline impact within the first few weeks.",
+      "You'll see outcomes in your first sprint. We ship in sprints, not full projects, so value compounds while we're still building. Most founders see meaningful pipeline impact within the first few weeks.",
   },
   {
     question: "Do I need to hire a GTM team first?",
     answer:
-      "No. That\u2019s the point. Instead of hiring 4\u20136 people at $500k+/year and waiting 6\u201312 months for them to ramp, you hire one GTM person and we augment them with AI agents and systems that deliver the same output. You get a full GTM function without the full headcount.",
+      "No. That's the point. Instead of hiring 4-6 people at $500k+/year and waiting 6-12 months for them to ramp, you hire one GTM person and we augment them with AI agents and systems that deliver the same output. You get a full GTM function without the full headcount.",
   },
   {
     question: "Does Runrait work with startups in New Zealand and Australia?",
@@ -249,9 +249,14 @@ export const FAQ_ITEMS: FAQItem[] = [
       "Every engagement is different. Common AI agents include product marketing, SDR, content, demand gen, revenue ops, CS ops, and marketing ops. AI-powered systems cover everything from messaging and website to pipeline management, analytics, sales enablement, and more. Yours are scoped during discovery based on your product, market, and current state.",
   },
   {
+    question: "Are you locked into a specific AI platform?",
+    answer:
+      "No. We're platform and model agnostic. We work across all major AI models and set things up so you can move between providers as the landscape evolves. No lock-in, no proprietary wrappers. You own the system and the flexibility to switch.",
+  },
+  {
     question: "How much does Runrait cost?",
     answer:
-      "Runrait is project-based and outcome-aligned \u2014 not a monthly retainer. Every engagement starts with a Discovery phase where we scope exactly what needs to be built. Pricing depends on complexity, but it\u2019s a fraction of the cost of hiring a full GTM team.",
+      "Runrait is project-based and outcome-aligned, not a monthly retainer. Every engagement starts with a Discovery phase where we scope exactly what needs to be built. Pricing depends on complexity, but it's a fraction of the cost of hiring a full GTM team.",
   },
 ];
 

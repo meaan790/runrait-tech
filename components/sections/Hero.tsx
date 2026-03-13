@@ -36,33 +36,45 @@ export function Hero() {
         </motion.div>
       </div>
 
-      {/* Stat contrast — intrigue, not the full answer */}
+      {/* Vertical stat contrast */}
       <motion.div
-        className="mt-16 flex w-full max-w-[800px] flex-col items-stretch gap-4 sm:flex-row sm:gap-5"
+        className="mt-16 flex w-full max-w-[520px] flex-col items-stretch gap-0"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}
       >
-        <div className="flex flex-1 flex-col items-center gap-3 rounded-[10px] border border-border bg-surface p-6 opacity-55">
+        {/* Traditional */}
+        <div className="flex flex-col items-center gap-1.5 rounded-t-[10px] border border-border bg-surface px-6 py-5 opacity-55">
           <span className="text-[10px] font-semibold uppercase tracking-widest text-text-tertiary">
             Traditional GTM team
           </span>
-          <span className="text-xl font-bold text-text-tertiary">Founding Team + 4–6 GTM Hires</span>
-          <span className="text-sm text-text-tertiary">$500k+/year</span>
-          <span className="text-xs text-text-tertiary">6–12 months to ramp</span>
+          <span className="text-lg font-bold text-text-tertiary sm:text-xl">
+            Founding Team + 4-6 GTM Hires
+          </span>
+          <span className="text-xs text-text-tertiary">
+            $500k+/year &middot; 6-12 months to ramp
+          </span>
         </div>
 
-        <div className="hidden items-center justify-center sm:flex">
-          <span className="text-sm font-semibold tracking-wide text-text-tertiary">vs</span>
+        {/* Divider with "vs" */}
+        <div className="relative flex items-center justify-center">
+          <div className="absolute inset-x-0 h-px bg-border" />
+          <span className="relative z-10 rounded-full border border-border bg-bg px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-text-tertiary">
+            vs
+          </span>
         </div>
 
-        <div className="flex flex-1 flex-col items-center gap-3 rounded-[10px] border border-accent bg-gradient-to-b from-[#0A2E2A] to-[#111111] p-6">
+        {/* With Runrait */}
+        <div className="flex flex-col items-center gap-1.5 rounded-b-[10px] border border-accent bg-gradient-to-b from-[#0A2E2A] to-[#111111] px-6 py-5">
           <span className="text-[10px] font-semibold uppercase tracking-widest text-accent">
             With Runrait
           </span>
-          <span className="text-xl font-bold text-text-primary">Founding Team + 1 GTM Hire</span>
-          <span className="text-sm text-accent">Full GTM output</span>
-          <span className="text-xs text-text-secondary">Results in weeks</span>
+          <span className="text-lg font-bold text-text-primary sm:text-xl">
+            Founding Team + 1 GTM Hire
+          </span>
+          <span className="text-xs text-accent">
+            Full GTM output &middot; Results in weeks
+          </span>
         </div>
       </motion.div>
     </section>
