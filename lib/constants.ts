@@ -137,12 +137,12 @@ export const GTM_OS = {
 };
 
 export const TRADITIONAL_ROLES = [
-  "Head of Marketing",
-  "SDR Manager",
-  "Content Writer",
-  "Demand Gen Manager",
-  "Revenue Ops Manager",
-  "CS Manager",
+  "VP Marketing",
+  "Head of Sales Dev",
+  "Content Lead",
+  "Demand Gen Lead",
+  "Revenue Operations",
+  "Customer Success",
 ];
 
 export const GTM_HIRE_AGENTS = [

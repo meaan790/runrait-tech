@@ -23,17 +23,17 @@ function TraditionalView() {
       transition={{ duration: 0.4 }}
     >
       <motion.div
-        className="flex flex-col items-center gap-2.5 rounded-[10px] border border-border bg-surface px-8 py-5"
+        className="flex flex-col items-center gap-2.5 rounded-[10px] border border-accent/20 bg-accent-muted/30 px-8 py-5"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3 }}
       >
-        <Users className="h-5 w-5 text-text-tertiary" strokeWidth={1.5} />
+        <Users className="h-5 w-5 text-accent/60" strokeWidth={1.5} />
         <span className="text-sm font-semibold text-text-primary">Founding Team</span>
       </motion.div>
 
       <motion.div
-        className="h-6 w-px bg-border"
+        className="h-6 w-px bg-accent/20"
         initial={{ scaleY: 0 }}
         animate={{ scaleY: 1 }}
         transition={{ duration: 0.2, delay: 0.15 }}
@@ -44,13 +44,13 @@ function TraditionalView() {
         {TRADITIONAL_ROLES.map((role, i) => (
           <motion.div
             key={role}
-            className="flex flex-col items-center gap-2.5 rounded-[8px] border border-border bg-surface px-4 py-5"
+            className="flex flex-col items-center gap-2.5 rounded-[8px] border border-accent/15 bg-accent-muted/20 px-4 py-5"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.2 + i * 0.06 }}
           >
-            <User className="h-5 w-5 text-text-tertiary" strokeWidth={1.5} />
-            <span className="text-center text-xs font-medium text-text-secondary">
+            <User className="h-5 w-5 text-accent/50" strokeWidth={1.5} />
+            <span className="text-center text-xs font-medium text-text-primary">
               {role}
             </span>
           </motion.div>
@@ -58,7 +58,7 @@ function TraditionalView() {
       </div>
 
       <div className="flex flex-col items-center gap-1">
-        <span className="text-lg font-bold text-text-tertiary">
+        <span className="text-lg font-bold text-text-secondary">
           {TRADITIONAL_ROLES.length} hires &middot; {GTM_OS.traditionalCost}
         </span>
       </div>
