@@ -66,7 +66,7 @@ export function Comparison() {
 
         {/* Mobile stacked cards (below sm) */}
         <motion.div
-          className="flex w-full flex-col gap-4 sm:hidden"
+          className="flex w-full flex-col gap-5 sm:hidden"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -75,32 +75,42 @@ export function Comparison() {
           {COMPARISON.rows.map((row, rowIdx) => (
             <div
               key={rowIdx}
-              className="rounded-[var(--radius)] border border-border bg-surface p-4"
+              className="rounded-[var(--radius)] border border-border bg-surface"
             >
-              <p className="mb-3 text-sm font-semibold text-text-primary">
-                {row[0]}
-              </p>
-              <div className="flex flex-col gap-2">
-                {valueHeaders.map((header, i) => (
-                  <div key={i} className="flex items-start justify-between gap-3">
-                    <span
-                      className={`shrink-0 text-xs font-medium ${
-                        i === 2 ? "text-accent" : "text-text-tertiary"
+              <div className="border-b border-border px-5 py-3">
+                <p className="text-sm font-semibold text-text-primary">
+                  {row[0]}
+                </p>
+              </div>
+              <div className="flex flex-col divide-y divide-border">
+                {valueHeaders.map((header, i) => {
+                  const isRunrait = i === 2;
+                  return (
+                    <div
+                      key={i}
+                      className={`flex flex-col gap-1 px-5 py-3 ${
+                        isRunrait ? "bg-accent-muted/20" : ""
                       }`}
                     >
-                      {header}
-                    </span>
-                    <span
-                      className={`text-right text-xs ${
-                        i === 2
-                          ? "font-medium text-text-primary"
-                          : "text-text-secondary"
-                      }`}
-                    >
-                      {row[i + 1]}
-                    </span>
-                  </div>
-                ))}
+                      <span
+                        className={`text-[11px] font-semibold uppercase tracking-wider ${
+                          isRunrait ? "text-accent" : "text-text-tertiary"
+                        }`}
+                      >
+                        {header}
+                      </span>
+                      <span
+                        className={`text-sm leading-relaxed ${
+                          isRunrait
+                            ? "font-medium text-text-primary"
+                            : "text-text-secondary"
+                        }`}
+                      >
+                        {row[i + 1]}
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           ))}
