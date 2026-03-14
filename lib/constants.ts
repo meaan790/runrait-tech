@@ -33,7 +33,7 @@ export interface OptionCard {
 
 export const PROBLEM = {
   headlineLine1: "You have product-market fit.",
-  headlineLine2: "You don\u2019t have a revenue engine\u2026 yet.",
+  headlineLine2: "You don\u2019t have a revenue engine\u2026yet.",
   body: "Customers are paying. But revenue growth is manual, founder-dependent, and not scaling.",
   cards: [
     {
@@ -86,7 +86,7 @@ export const TYPICAL_OPTIONS = {
         "Every hour your team spends stitching together GTM is an hour pulled from product, customers, and fundraising.",
     },
   ] as OptionCard[],
-  transition: "There is a 5th option.",
+  transition: "None of these build what you actually need.",
 };
 
 export interface PhaseCard {
