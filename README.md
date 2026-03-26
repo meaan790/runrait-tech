@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# runrait-website
 
-## Getting Started
+Marketing site for [runrait.ai](https://runrait.ai). Single-page, static-export Next.js site.
 
-First, run the development server:
+## Stack
+
+- **Framework:** Next.js 16, React 19, TypeScript
+- **Styling:** Tailwind CSS 4
+- **Animation:** Framer Motion
+- **Icons:** Lucide React
+- **Build:** Static export (`output: "export"`)
+- **Hosting:** GitHub Pages (via `.github/workflows/deploy.yml`)
+- **Domain:** runrait.ai (CNAME)
+
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+Static files output to `out/`.
 
-To learn more about Next.js, take a look at the following resources:
+## Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Push to `main`. GitHub Actions builds and deploys to GitHub Pages automatically.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Structure
 
-## Deploy on Vercel
+```
+app/
+  page.tsx          # Homepage with JSON-LD schemas
+  layout.tsx        # Root layout, metadata, fonts
+  globals.css       # Global styles
+components/
+  sections/         # Page sections (Hero, Problem, HowItWorks, etc.)
+  ui/               # Shared UI components (Button, Card, SectionWrapper)
+lib/
+  constants.ts      # All site copy, FAQ, comparison data
+public/
+  robots.txt
+  CNAME
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Knowledge Files
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Company knowledge docs live in the repo root as markdown files. These are reference documents, not part of the site build.
+
+| File | Purpose |
+|---|---|
+| `runrait-messaging-positioning.md` | Positioning, value prop, audience, differentiators |
+| `runrait-brand-identity-system.md` | Voice, tone, writing standards, terminology |
+| `runrait-visual-identity-brief.md` | Colours, typography, layout principles |
+| `runrait-website-copy.md` | All website copy (reference; source of truth is `lib/constants.ts`) |
+| `runrait-website-outline.md` | Site structure and section purposes |
+| `runrait-seo-implementation.md` | SEO technical implementation guide |
+| `runrait-seo-leadgen-plan.md` | SEO, GEO, and lead generation strategy |
+| `runrait-validation-plan.md` | Business validation and growth milestones |
